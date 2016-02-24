@@ -8,6 +8,7 @@ For markup, we use [Jade](http://jade-lang.com/), more specifically [PyJade](htt
 * Keep lines fewer than 120 characters.
 * Always include a space before and after function parameter.
 * No console.log statements
+
 `#bad
 function foo(){
 #good
