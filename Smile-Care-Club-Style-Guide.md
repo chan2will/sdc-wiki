@@ -12,8 +12,7 @@ For markup, we use [Jade](http://jade-lang.com/), more specifically [PyJade](htt
 `#bad
 function foo(){
 #good
-function foo() {
-`
+function foo() {`
 
 
 # Django Templating
