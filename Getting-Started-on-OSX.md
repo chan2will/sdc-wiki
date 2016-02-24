@@ -47,14 +47,14 @@ git remote update
 git branch -u upstream/develop
 ```
 
-## Activate your virtual environment and pip install dependencies
+## Activate your virtual environment and install dependencies
 ```bash
 workon scc
 cd ~/dev/scc-api
 pip install -r requirements.txt
 ```
 
-## Setup the database and run the site
+## Set up the database and run the site
 ```bash
 cd ~/dev/scc-api/smilecheck
 python manage.py migrate
