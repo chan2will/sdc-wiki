@@ -35,3 +35,31 @@ git config --global user.email "first.last@smilecareclub.com"  # set your email 
 
 * Now you can add your SSH key to your GitHub account [here](https://github.com/settings/ssh)
 * Also make sure to confirm your work e-mail on your GitHub account
+
+## Set up local repos
+```bash
+mkdir ~/dev
+cd ~/dev
+git clone git@github.com:CamelotVG/<repo-name>.git
+cd ~/dev/<repo-name>
+git remote add upstream git@github.com:CamelotVG/<repo-name>.git
+git remote update
+git branch -u upstream/develop
+```
+
+## Activate your virtual environment and pip install dependencies
+```bash
+workon scc
+cd ~/dev/scc-api
+pip install -r requirements.txt
+```
+
+## Setup the database and run the site
+```bash
+cd ~/dev/scc-api/smilecheck
+python manage.py migrate
+python manage.py pyrunner
+python manage.py runserver
+```
+
+
