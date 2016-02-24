@@ -20,7 +20,7 @@ function setSidebar() {
   });
 }
 
-// good
+`// good
 function setSidebar() {
   var $sidebar = $('.sidebar');
   $sidebar.hide();
@@ -31,7 +31,7 @@ function setSidebar() {
     'background-color': 'pink'
   });
 }
-`}`
+}`
 
 # Django Templating
 ## Template Tags
