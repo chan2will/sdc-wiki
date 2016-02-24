@@ -9,12 +9,28 @@ For markup, we use [Jade](http://jade-lang.com/), more specifically [PyJade](htt
 * Always include a space before and after function parameter.
 * No console.log statements
 
-`function setSideBar() {
+// bad
+function setSidebar() {
   $('.sidebar').hide();
 
+  // ...stuff...
+
   $('.sidebar').css({
-    'background-color': white;
-  })`
+    'background-color': 'pink'
+  });
+}
+
+// good
+function setSidebar() {
+  var $sidebar = $('.sidebar');
+  $sidebar.hide();
+
+  // ...stuff...
+
+  $sidebar.css({
+    'background-color': 'pink'
+  });
+}
 `}`
 
 # Django Templating
