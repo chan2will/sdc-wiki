@@ -9,6 +9,7 @@ For markup, we use [Jade](http://jade-lang.com/), more specifically [PyJade](htt
 * Always include a space before and after function parameter.
 * No console.log statements
 
+<code>
 // bad
 function setSidebar() {
   $('.sidebar').hide();
@@ -20,7 +21,7 @@ function setSidebar() {
   });
 }
 
-`// good
+// good
 function setSidebar() {
   var $sidebar = $('.sidebar');
   $sidebar.hide();
@@ -31,7 +32,8 @@ function setSidebar() {
     'background-color': 'pink'
   });
 }
-}`
+}
+</code>
 
 # Django Templating
 ## Template Tags
