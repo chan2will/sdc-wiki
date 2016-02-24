@@ -8,16 +8,17 @@ For markup, we use [Jade](http://jade-lang.com/), more specifically [PyJade](htt
 * Keep lines fewer than 120 characters.
 * Always include a space before and after function parameter.
 * No console.log statements
+* Cache jQuery selectors
 
-<code>
-// bad  
-function setSidebar() {  
-  $('.sidebar').hide();  
+```
+// bad
+function setSidebar() {
+  $('.sidebar').hide();
 
   // ...stuff...
 
-  $('.sidebar').css({  
-    'background-color': 'pink'  
+  $('.sidebar').css({
+    'background-color': 'pink'
   });
 }
 
@@ -32,8 +33,7 @@ function setSidebar() {
     'background-color': 'pink'
   });
 }
-}
-</code>
-
+```
+    
 # Django Templating
 ## Template Tags
