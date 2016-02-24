@@ -10,14 +10,14 @@ For markup, we use [Jade](http://jade-lang.com/), more specifically [PyJade](htt
 * No console.log statements
 
 <code>
-// bad
-function setSidebar() {
-  $('.sidebar').hide();
+// bad  
+function setSidebar() {  
+  $('.sidebar').hide();  
 
   // ...stuff...
 
-  $('.sidebar').css({
-    'background-color': 'pink'
+  $('.sidebar').css({  
+    'background-color': 'pink'  
   });
 }
 
