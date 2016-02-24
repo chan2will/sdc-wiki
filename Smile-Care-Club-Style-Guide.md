@@ -34,6 +34,16 @@ function setSidebar() {
   });
 }
 ```
-    
 # Django Templating
+* Placement of all `block` and `load` tags should be at the top of the file.
+* Use underscores for multi-word values.
+```
+//good
+page_title 
+
+//bad
+pageTitle 
+page-title
+
+```
 ## Template Tags
