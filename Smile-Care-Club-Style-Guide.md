@@ -6,6 +6,14 @@ For markup, we use [Jade](http://jade-lang.com/), more specifically [PyJade](htt
 * No trailing semicolons.
 * No trailing whitespace.
 * Keep lines fewer than 120 characters.
+* Always include a space before and after function parameter.
+* No console.log statements
+`#bad
+function foo(){
+#good
+function foo() {
+`
+
 
 # Django Templating
 ## Template Tags
