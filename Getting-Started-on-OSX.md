@@ -37,10 +37,11 @@ git config --global user.email "first.last@smilecareclub.com"  # set your email 
 * Also make sure to confirm your work e-mail on your GitHub account
 
 ## Set up local repos
+Start by forking the repos you're going to be working on ([https://github.com/CamelotVG](https://github.com/CamelotVG))
 ```bash
 mkdir ~/dev
 cd ~/dev
-git clone git@github.com:CamelotVG/<repo-name>.git
+git clone git@github.com:<your-github-username>/<repo-name>.git
 cd ~/dev/<repo-name>
 git remote add upstream git@github.com:CamelotVG/<repo-name>.git
 git remote update
@@ -52,6 +53,12 @@ git branch -u upstream/develop
 workon scc
 cd ~/dev/scc-api
 pip install -r requirements.txt
+```
+Install npm modules
+(as of 2/24/2016, although this will likely become site-specific soon, in which case you'll want to find the site's `package.json` and `npm install`):
+```bash
+cd smilecheck
+npm install
 ```
 
 ## Set up the database and run the site
