@@ -10,9 +10,9 @@ For markup, we use [Jade](http://jade-lang.com/), more specifically [PyJade](htt
 * No console.log statements
 
 `#bad
-function foo(){
-#good
-function foo() {`
+`function foo(){
+`#good
+`function foo() {
 
 
 # Django Templating
