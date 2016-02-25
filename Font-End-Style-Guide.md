@@ -3,6 +3,39 @@
 * Delete extra whitespace. 
 
 # Structure
+Jade, Sass, and JavaScript files should all follow the same naming and folder structure conventions
+```
+scc-api/
+├── smilecheck/
+|   ├── sites/
+|   |   ├── staff/
+|   |   |   ├── static/
+|   |   |   |   ├── staff/
+|   |   |   |   |   ├── images/
+|   |   |   |   |   |   ├── logo.png
+|   |   |   |   |   |   ├── cases/
+|   |   |   |   |   |   |   ├──caseHeader.png
+|   |   |   |   |   ├── scripts/
+|   |   |   |   |   |   ├── cases/
+|   |   |   |   |   |   |   ├── detail.js
+|   |   |   |   |   |   |   ├── list.js
+|   |   |   |   |   ├── styles/
+|   |   |   |   |   |   ├── cases/
+|   |   |   |   |   |   |   ├── detail.scss
+|   |   |   |   |   |   |   ├── list.scss
+|   |   |   |   |   |   ├── app.scss
+|   |   |   ├── templates/
+|   |   |   |   ├── staff/
+|   |   |   |   |   ├── cases/
+|   |   |   |   |   |   ├── detail.jade
+|   |   |   |   |   |   ├── list.jade
+|   |   |   |   |   ├── eval_order_wizard/
+|   |   |   |   |   |   ├── 1_email.jade
+|   |   |   |   |   |   ├── 2_customer.jade
+|   |   |   |   |   ├── base.jade
+|   |   |   |   |   ├── sidenav.jade
+|   |   |   |   |   ├── topnav.jade
+```
 
 # Django Templating
 * Placement of all `block` and `load` tags should be at the top of the file.
