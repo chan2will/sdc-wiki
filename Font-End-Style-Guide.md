@@ -2,7 +2,9 @@
 * No print statements, console.log statements or commented code in PRs.
 * Delete extra whitespace. 
 
-## Django Templating
+# Structure
+
+# Django Templating
 * Placement of all `block` and `load` tags should be at the top of the file.
 * In Django template code, put one (and only one) space between the curly brackets and the tag contents.
 ```
@@ -13,7 +15,7 @@
 {{ foo }}
 ```
 
-For more questions regarding Pythonic Coding styles, reference [Django Coding Styles](https://docs.djangoproject.com/en/1.9/internals/contributing/writing-code/coding-style/) or [Python Style Guide](https://www.python.org/dev/peps/pep-0008/)
+For more questions regarding Pythonic Coding styles, reference [Django Coding Styles](https://docs.djangoproject.com/en/1.9/internals/contributing/writing-code/coding-style/)
 ## Template Tags
 
 # Markup
@@ -35,7 +37,6 @@ For markup, we use [Jade](http://jade-lang.com/), more specifically [PyJade](htt
 [CSS Tricks](https://css-tricks.com/) is a great reference for CSS rule-of-thumbs.
 
 # JavaScript
-* No trailing semicolons.
 * No trailing whitespace.
 * Keep lines fewer than 120 characters.
 * Always include a space before and after function parameter.
@@ -64,4 +65,34 @@ function setSidebar() {
     'background-color': 'pink'
   });
 }
+```
+
+* If you need to create a JavaScript variable with a value from Django:
+```
+//string
+script(type='text/javascript').
+  var stringVar = {{ string_var }};
+  $(window).on("load", function () {
+    if ($("#foo").is(":checked")) {
+      $("#bar").val(stringVar);
+    }
+  });
+
+//json
+script(type='text/javascript').
+  var jsonVariable = parseJSON("{{ json_variable }}");
+  $(window).on("load", function () {
+    if ($("#foo").is(":checked")) {
+      $("#bar").val(jsonVariable);
+    }
+  });
+
+//integer
+script(type='text/javascript').
+  var number = parseInt("{{ number_int }}");
+  $(window).on("load", function () {
+    if ($("#foo").is(":checked")) {
+      $("#bar").val(number);
+    }
+  });
 ```
