@@ -34,16 +34,22 @@ function setSidebar() {
   });
 }
 ```
-# Django Templating
+
+# Python
+* Use underscores, not camelCase, for variable, function and method names (i.e. poll.get_unique_voters(), not poll.getUniqueVoters).
+
+## Django Templating
 * Placement of all `block` and `load` tags should be at the top of the file.
 * Use underscores for multi-word values.
+* Use InitialCaps for class names (or for factory functions that return classes).
+* In Django template code, put one (and only one) space between the curly brackets and the tag contents.
 ```
-//good
-page_title 
-
 //bad
-pageTitle 
-page-title
+{{foo}}
 
+//good
+{{ foo }}
 ```
+
+For more questions regarding Pythonic Coding styles, reference [Django Coding Styles](https://docs.djangoproject.com/en/1.9/internals/contributing/writing-code/coding-style/)
 ## Template Tags
