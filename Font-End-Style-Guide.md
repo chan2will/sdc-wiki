@@ -57,6 +57,7 @@ For markup, we use [Jade](http://jade-lang.com/), more specifically [PyJade](htt
 
 ## Styles
 * Don't use IDs, use Classes.
+* Do not use inline styles. 
 * Don't use vendor prefixes, because we use [Auto Prefixer](https://css-tricks.com/autoprefixer/)
 * Only global styles belong in app.scss
 * All colors belong in _app.variables.scss. If you need to add a new color, add a hex (not rgb) color in this file.
