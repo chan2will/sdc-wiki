@@ -105,7 +105,7 @@ function setSidebar() {
 ```
 //string
 script(type='text/javascript').
-  var stringVar = {{ string_var }};
+  var stringVar = "{{ string_var }}";
   $(window).on("load", function () {
     if ($("#foo").is(":checked")) {
       $("#bar").val(stringVar);
@@ -130,3 +130,4 @@ script(type='text/javascript').
     }
   });
 ```
+> Putting the `{{ variable }}` inside of quotes will cause linters, PyCharm, Atom, etc. to understand it as JavaScript, and with using things like `parseInt()` or `parseFloat()`, we get the added benefit of being certain what data type the variable will hold!
