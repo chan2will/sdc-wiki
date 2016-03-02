@@ -74,6 +74,16 @@ for object in objects:
     .insides Content
 ```
 
+Don't use Jade mixins.  You can accomplish the same thing with Django templates using things like:
+```
+{% include "_some_template_thing.html" with form=form other_var=other_var_1 %}
+```
+OR
+```
+for object in objects_list
+  {% include "_other_template_thing.html" with object=object %}
+```
+
 ## Styles
 * Don't use IDs, use Classes.
 * Do not use inline styles. 
