@@ -1,5 +1,6 @@
 # General
-* No print statements, console.log statements or commented code in PRs.
+* No `print()` or `console.log()` statements
+* VERY SPARINGLY include commented-out code - only if it's a very important note of what to do/not to do
 * Delete extra whitespace. 
 
 # Structure
@@ -54,6 +55,24 @@ For more questions regarding Pythonic Coding styles, reference [Django Coding St
 # Markup
 ## HTML/Jade 
 For markup, we use [Jade](http://jade-lang.com/), more specifically [PyJade](https://github.com/syrusakbary/pyjade).
+
+* Use Jade syntax in: for loops and if statements - NEVER USE `| {% for x in y %}`
+* Use pipe-django (`| {% sometag %}`) for things not built into Jade and blocks
+  * `| {% with case.patient.prescription_set.first as rx %} ... {% endwith %}`
+  * `| {% block navbar %} ... {% endblock %}`
+  * `| {% csrf_token %}`
+* For Django context variables use single quotes and Django syntax (`attr='{{ variable_name }}'`)
+* For Jade variables (in mixins only) use unquoted variable names (`attribute=variable_name`)
+* Except in very special cases, use pipe-django syntax for `include` and `extends`
+* Don't use `each` or `while` Jade keywords
+* Do not use `- var x = variable` ... use `{% with stuff as var %}.. {% endwith %}`
+
+If you have conditional attributes/classes, do something like this:
+```
+for object in objects:
+  .my-div(class='{{ object.variable|yesno:"active,inactive" }}')
+    .insides Content
+```
 
 ## Styles
 * Don't use IDs, use Classes.
