@@ -13,7 +13,7 @@ brew install libjpeg  # for photo assessment manipuation
 ## Install VirtualEnv, so you can separate your Python runtime for SmileCheck
 
 ```bash
-pip3 install virtualenv virtualenv-wrapper  # this runs on your system python
+pip3 install virtualenv virtualenvwrapper  # this runs on your system python
 mkdir ~/.virtualenvs  # this is where the virtual environment files will live
 echo 'export WORKON_HOME=~/.virtualenvs' >> ~/.bashrc  # env var to let virtualenv know where to keep files
 echo 'VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3' >> ~/.bashrc  # point it to correct python version
