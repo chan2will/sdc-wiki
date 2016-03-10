@@ -68,10 +68,3 @@ python manage.py migrate
 python manage.py pyrunner
 python manage.py runserver
 ```
-Let's also have our local database server start up automatically when our machine starts up:
-```bash
-mkdir -p ~/Library/LaunchAgents
-ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents
-launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
-```
-
