@@ -55,10 +55,9 @@ cd ~/dev/scc-api
 pip install -r requirements.txt
 ```
 Install npm modules
-(as of 2/24/2016, although this will likely become site-specific soon, in which case you'll want to find the site's `package.json` and `npm install`):
 ```bash
 cd smilecheck
-npm install
+python manage.py npm
 ```
 
 ## Set up the database and run the site
