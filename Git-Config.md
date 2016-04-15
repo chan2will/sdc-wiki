@@ -1,7 +1,7 @@
 ###Example Git Configuration
 The below is an example of a git configuration file at the location `~/.gitconfig` 
 
-> Please note you should replace the `[user]` section values to your personal information as well as replace for the `YOUR_GITHUB_USERNAME` and `MY NAME` variables in the configuration file body below
+> Please note you should replace the `[user]` section values to your personal information as well as replace for the `YOUR_GITHUB_USERNAME` and `MY NAME` variables in the configuration file body below.  Also configure the `[core]` section `editor` key to your liking, it is commented out by default.  This would be the editor git would call for rebasing.
 
 	[user]
 		name = James Tiberius Kirk
