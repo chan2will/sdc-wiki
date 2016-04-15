@@ -42,7 +42,7 @@ The below is an example of a git configuration file at the location `~/.gitconfi
 	    br = branch
 	    co = checkout
 	    df = diff
-            rb = rebase
+        rb = rebase
 	    #Note - depends on the pretty format above
 	    lg = log --graph --abbrev-commit --date=relative
 	    hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
