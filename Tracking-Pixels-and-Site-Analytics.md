@@ -51,7 +51,7 @@
  * Spartax code (maybe works)
  * No Vulcan code
 
-# EXAMPLE CODE FOR TRACKING PIXEL FRAMEWORK
+## EXAMPLE CODE FOR TRACKING PIXEL FRAMEWORK
 - All tracking pixel code is located inside of `smilecheck/sites/website/tracking.py`. Manipulation of URLS for tracking pixels should handled inside of the base class if possible. See example for how this might be done.
 
 ```
