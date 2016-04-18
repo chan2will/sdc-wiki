@@ -7,7 +7,7 @@ Google Analytics (A)
 Facebook/Instagram (A)  
 Rakuten (A)  
 
-**Event Based Pixels**:
+**Event Based Pixels**:  
 
 - Rakuten (I)
 	- Order complete: All orders (contains: order uuid and order total)
@@ -19,9 +19,9 @@ Rakuten (A)
 	- Get started
  
 **Affiliates/Referrals**:
- *None*
+*None*
  
-*Key*
+*Key*  
 **A**: Active  
 **I**: Inactive  
 
