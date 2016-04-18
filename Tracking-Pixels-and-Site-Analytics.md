@@ -2,7 +2,7 @@
 
 ### Implemented 
 
-**Universal Pixels**:
+**Universal Pixels**:  
 Google Analytics (A)  
 Facebook/Instagram (A)  
 Rakuten (A)  
@@ -21,9 +21,9 @@ Rakuten (A)
 **Affiliates/Referrals**:
  *None*
  
- *Key*
- **A**: Active 
-**I**: Inactive
+*Key*
+**A**: Active  
+**I**: Inactive  
 
 ----
 
