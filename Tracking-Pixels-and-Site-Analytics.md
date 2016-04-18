@@ -1,73 +1,61 @@
-# Questions to ask:
+
+
+### Implemented 
+
+**Universal Pixels**:
+Google Analytics (A)
+Facebook/Instagram (A)
+Rakuten (A)
+
+**Event Based Pixels**:
+
+- Rakuten (I)
+	- Order complete: All orders (contains: order uuid and order total)
+
+- Twitter (I)
+	- Order complete: EK orders
+	- Order complete: Scan orders
+	- Post smile assessment
+	- Get started
+ 
+**Affiliates/Referrals**:
+ *None*
+ 
+ *Key*
+ **A**: Active 
+**I**: Inactive
+
+----
+
+### Not implemented
+
+Google AdWords
+Bing Ads (1)
+Facebook Universal Pixel (FB and Instagram)
+Pinterest
+Taboolah
+Outbrain (2)
+Sniply
+Groupon (3)
+Yahoo (Gemini)
+
+**Affiliates/Referrals**:
+ShareASale (2)
+
+*Key*
+**1**: Represents exclusionary list based on those who went to `/thank-you`
+**2**: May/may not be implemented on old commerce website
+**3**: No html/js code, implemented through other means
+
+
+----
+
+### Questions to ask:
 
 * What pages does each piece go on/how does it work?
-* Let's 99% of the time simply include script on the page (sometimes conditionally)
+* 99% of the time simply include script on the page (sometimes conditionally)
 
-# What do we use right now?
-
-* Google Analytics
- * Spartax code
- * No Vulcan code
-* Google AdWords
- * Spartax code
- * No Vulcan code
-* Bing Ads
- * Spartax code
- * No Vulcan code
- * Exclusionary list based on those who went to `/thank-you`
-* Facebook Universal Pixel (FB and Instagram)
- * Spartax code
- * No Vulcan code
- * Exclusionary list based on those who went to `/thank-you`
-* Pinterest
- * Spartax code
- * No Vulcan code
-* Twitter
- * Spartax code
- * No Vulcan code
-* MediaForge (Rakuten)
- * Spartax code
- * No Vulcan code
-* Taboolah
- * Spartax code
- * No Vulcan code
-* Outbrain
- * Spartax code (maybe works)
- * No Vulcan code
-* Sniply
- * Spartax code
- * No Vulcan code
-* Groupon
- * No code (we have coupon code infra for that)
-* Yahoo (Gemini)
- * Spartax code
- * No Vulcan code
-
-
-
-# Currently Implemented Pixels (for new commerce website)
-
-*Universal Pixels*
-* Google Analytics (Active)
-* Facebook & Instagram (Active)
-* Rakuten (Active)
-
-*Event Based Pixels*
-Twitter (Inactive)
- * EK order
- * Scan order
- * Post Smile Assessment
-
-
-
-
-# Affiliates/Referrals
-
-* ShareASale
- * Spartax code (maybe works)
- * No Vulcan code
-
-## EXAMPLE CODE FOR TRACKING PIXEL FRAMEWORK
+### EXAMPLE CODE FOR TRACKING PIXEL FRAMEWORK
 - All tracking pixel code is located inside of `smilecheck/sites/website/tracking.py`. Manipulation of URLS for tracking pixels should handled inside of the base class if possible. See example for how this might be done.
 
 ```
