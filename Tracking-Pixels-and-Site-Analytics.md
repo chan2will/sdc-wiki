@@ -44,6 +44,23 @@
  * No Vulcan code
 
 
+
+# Currently Implemented Pixels (for new commerce website)
+
+*Universal Pixels*
+* Google Analytics (Active)
+* Facebook & Instagram (Active)
+* Rakuten (Active)
+
+*Event Based Pixels*
+Twitter (Inactive)
+ * EK order
+ * Scan order
+ * Post Smile Assessment
+
+
+
+
 # Affiliates/Referrals
 
 * ShareASale
