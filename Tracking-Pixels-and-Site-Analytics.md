@@ -31,7 +31,6 @@ Rakuten (A)
 
 Google AdWords
 Bing Ads (1)  
-Facebook Universal Pixel (FB and Instagram)  
 Pinterest  
 Taboolah  
 Outbrain (2)  
