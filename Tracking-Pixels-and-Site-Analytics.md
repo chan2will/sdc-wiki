@@ -2,7 +2,6 @@
 
 * What pages does each piece go on/how does it work?
 * Let's 99% of the time simply include script on the page (sometimes conditionally)
-* 
 
 # What do we use right now?
 
