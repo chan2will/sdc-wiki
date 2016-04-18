@@ -3,9 +3,9 @@
 ### Implemented 
 
 **Universal Pixels**:
-Google Analytics (A)
-Facebook/Instagram (A)
-Rakuten (A)
+Google Analytics (A)  
+Facebook/Instagram (A)  
+Rakuten (A)  
 
 **Event Based Pixels**:
 
