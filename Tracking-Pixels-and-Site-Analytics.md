@@ -30,22 +30,22 @@ Rakuten (A)
 ### Not implemented
 
 Google AdWords
-Bing Ads (1)
-Facebook Universal Pixel (FB and Instagram)
-Pinterest
-Taboolah
-Outbrain (2)
-Sniply
-Groupon (3)
-Yahoo (Gemini)
+Bing Ads (1)  
+Facebook Universal Pixel (FB and Instagram)  
+Pinterest  
+Taboolah  
+Outbrain (2)  
+Sniply  
+Groupon (3)  
+Yahoo (Gemini)  
 
-**Affiliates/Referrals**:
-ShareASale (2)
+**Affiliates/Referrals**:  
+ShareASale (2)  
 
-*Key*
-**1**: Represents exclusionary list based on those who went to `/thank-you`
-**2**: May/may not be implemented on old commerce website
-**3**: No html/js code, implemented through other means
+*Key*  
+**1**: Represents exclusionary list based on those who went to `/thank-you`  
+**2**: May/may not be implemented on old commerce website  
+**3**: No html/js code, implemented through other means  
 
 
 ----
