@@ -29,7 +29,7 @@ Rakuten (A)
 
 ### Not implemented
 
-Google AdWords
+Google AdWords  
 Bing Ads (1)  
 Pinterest  
 Taboolah  
