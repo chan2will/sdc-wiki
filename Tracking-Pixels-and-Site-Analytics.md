@@ -18,7 +18,7 @@ Rakuten (A)
 	- Post smile assessment
 	- Get started
  
-**Affiliates/Referrals**:
+**Affiliates/Referrals**:  
 *None*
  
 *Key*  
