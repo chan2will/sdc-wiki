@@ -1,7 +1,7 @@
 ### New Commerce Website TODO
 #### Instructions
 1. These should directly reflect TODOs inside of respective files
-2. Please add a TODO for anything that doesn't currently exists such as urls, functionality, etc...
+2. Please add a TODO for anything that doesn't currently exist such as urls, functionality, etc...
 
 **Comparisons (_comparisons.jade)**
 - Remove legacy smile_assessment link
