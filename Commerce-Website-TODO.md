@@ -1,4 +1,5 @@
 ### New Commerce Website TODO
+#### Instructions
 1. These should directly reflect TODOs inside of respective files
 2. If you find yourself bored later when these some of these can be complete.
 3. Please add a TODO for anything that doesn't currently exists such as urls, functionality, etc...
