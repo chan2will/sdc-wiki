@@ -13,3 +13,9 @@ To maintain SEO please modify all URLs as below...
 
 **Benefits Page (benefits.jade)**
 - Remove legacy smile_assessment link
+
+**Pricing Page (pricing.jade)**
+- Remove legacy smile_assessment link
+
+**Get Started (templatetag: template/get_started.html)**
+- Remove legacy smile_assessment link
