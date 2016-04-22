@@ -16,6 +16,7 @@ To maintain SEO please modify all URLs as below...
 
 **Pricing Page (pricing.jade)**
 - Remove legacy smile_assessment link
+- Retainers not yet supported in product line, add copy back to page later.
 
 **Get Started (templatetag: template/get_started.html)**
 - Remove legacy smile_assessment link
