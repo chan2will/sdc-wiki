@@ -1,3 +1,5 @@
+# Notes from slack: 
+
 FYI to all: when running the restore data to dev/staging
 
 you’ll want to ssh into the machines and stop the `vulcan` and `celery` containers
@@ -21,3 +23,5 @@ to selectively terminate queries
 for instance, today some temporary report table queries were broken
 
 somehow the server hung on creating a temp table in about 9 or 10 different connections
+
+If you SELECT on pg_stat_activity while it's running, it will copy the data in table alphabetical order then create all the constraints, triggers, and indices, in table name order.
