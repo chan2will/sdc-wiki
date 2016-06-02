@@ -1,0 +1,3 @@
+# To remove all contacts from a database
+
+First create a new Contact List, backed by the database you want to remove contacts from.  Then go to that contact list (which starts with 0 things in it).  Click the "Add Contacts" button.  Create a query that will select all of them (i.e. Email is not empty".  Let that job run, which should import all of the contacts into the contact list.  Once you've done that, go back to the database and click "Purge".  You'll want to select to purge the e-mails located in your temporary contact list (it doesn't allow choosing itself... dumb).  Let that job run and it should have dumped everything.
