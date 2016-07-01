@@ -72,7 +72,7 @@ open ~/dev/scc-website/dist
 1. Delete `index.html`  
 2. Copy all folders
 3. Paste into scc-api's `static` folder
-4. Open `/Users/eric/dev/scc-api/smilecheck/sites/website/templates/website/index.html` in a text editor
+4. Open `~/dev/scc-api/smilecheck/sites/website/templates/website/index.html` in a text editor
 5. Replace css static filenames with names from `static/styles` folder:
    * `ie-main.XXXXXXXX.css`
    * `ie-vendor.XXXXXXXX.css`
