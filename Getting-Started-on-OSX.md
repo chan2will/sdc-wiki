@@ -27,10 +27,10 @@ Use `workon smilecheck` to activate your virtual environment and `deactivate` to
 ## Git setup
 
 ```bash
-ssh-keygen -t rsa -C "first.last@smilecareclub.com"  # generate a public/private keypair
+ssh-keygen -t rsa -C "first.last@smiledirectclub.com"  # generate a public/private keypair
 cat ~/.ssh/id_rsa.pub | pbcopy  # shortcut to copy it to clipboard
 git config --global user.name "Firstname Lastname"  # set your name on commit messages
-git config --global user.email "first.last@smilecareclub.com"  # set your email on commit messages
+git config --global user.email "first.last@smiledirectclub.com"  # set your email on commit messages
 ```
 
 * Now you can add your SSH key to your GitHub account [here](https://github.com/settings/ssh)
