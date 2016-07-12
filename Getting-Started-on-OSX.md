@@ -4,9 +4,10 @@
 xcode-select --install  # install XCode developer tools
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"  # install HomeBrew
 brew install git  # git used for source control
-brew install python3 python3-pip # we use python 3, not 2
+brew install python3  # we use python 3, not 2; pip3 is installed with python3
 brew install postgresql  # we use postgres as our database (follow the instructions this command spits out too)
 brew install redis  # we use redis as a kv store/queue (follow the instructions for this one as well)
+brew install node  # installs node and npm
 brew install libjpeg  # for photo assessment manipuation
 ```
 `launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist` will start the postgres server now and on all subsequent system startups.
@@ -16,7 +17,7 @@ brew install libjpeg  # for photo assessment manipuation
 pip3 install virtualenv virtualenvwrapper  # this runs on your system python
 mkdir ~/.virtualenvs  # this is where the virtual environment files will live
 echo 'export WORKON_HOME=~/.virtualenvs' >> ~/.bashrc  # env var to let virtualenv know where to keep files
-echo 'VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3' >> ~/.bashrc  # point it to correct python version
+echo 'VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3' >> ~/.bashrc  # point it to correct python version
 echo 'source /usr/local/bin/virtualenvwrapper.sh' >> ~/.bashrc  # script that sets up aliases
 . ~/.bashrc  # reload our bashrc file with these new env vars
 mkvirtualenv -p $(which python3) smilecheck  # this creates the virtual environment
@@ -63,7 +64,17 @@ python manage.py npm
 ## Set up the database and run the site
 ```bash
 cd ~/dev/scc-api/smilecheck
+brew services start postgresql  #start postgresql service, if not already started
+createuser postgres  # create postgres user
+createdb tesseract  # creates tesseract db
 python manage.py migrate
 python manage.py pyrunner
 python manage.py runserver
+```
+
+## Useful applications for development
+```bash
+install chrome browser: https://www.chrome.com
+install pyCharm: https://www.jetbrains.com/pycharm/
+install pgAdmin: https://www.pgadmin.org/download/
 ```
