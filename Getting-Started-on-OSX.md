@@ -39,6 +39,7 @@ git config --global user.email "first.last@smiledirectclub.com"  # set your emai
 
 ## Set up local repos
 Start by forking the repos you're going to be working on ([https://github.com/CamelotVG](https://github.com/CamelotVG))
+_After_ you've forked the repo(s) on GitHub, clone a local copy:
 ```bash
 mkdir ~/dev
 cd ~/dev
