@@ -67,8 +67,6 @@ python manage.py npm
 ```bash
 cd ~/dev/scc-api/smilecheck
 brew services start postgresql  #start postgresql service, if not already started
-createuser postgres  # create postgres user
-createdb tesseract  # creates tesseract db
 python manage.py migrate
 python manage.py pyrunner
 python manage.py runserver
