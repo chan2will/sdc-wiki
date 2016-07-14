@@ -10,7 +10,14 @@ brew install redis  # we use redis as a kv store/queue (follow the instructions 
 brew install node  # installs node and npm
 brew install libjpeg  # for photo assessment manipuation
 ```
-`launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist` will start the postgres server now and on all subsequent system startups.
+
+To start the postgres server now and on all subsequent system startups ([source](https://chartio.com/resources/tutorials/how-to-start-postgresql-server-on-mac-os-x):
+```
+mkdir -p ~/Library/LaunchAgents
+ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents
+launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
+```
+
 ## Install VirtualEnv, so you can separate your Python runtime for SmileCheck
 
 ```bash
