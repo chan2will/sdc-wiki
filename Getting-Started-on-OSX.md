@@ -16,10 +16,10 @@ brew install libjpeg  # for photo assessment manipuation
 ```bash
 pip3 install virtualenv virtualenvwrapper  # this runs on your system python
 mkdir ~/.virtualenvs  # this is where the virtual environment files will live
-echo 'export WORKON_HOME=~/.virtualenvs' >> ~/.bashrc  # env var to let virtualenv know where to keep files
-echo 'VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3' >> ~/.bashrc  # point it to correct python version
-echo 'source /usr/local/bin/virtualenvwrapper.sh' >> ~/.bashrc  # script that sets up aliases
-. ~/.bashrc  # reload our bashrc file with these new env vars
+echo 'export WORKON_HOME=~/.virtualenvs' >> ~/.bash_profile  # env var to let virtualenv know where to keep files
+echo 'VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3' >> ~/.bash_profile  # point it to correct python version
+echo 'source /usr/local/bin/virtualenvwrapper.sh' >> ~/.bash_profile  # script that sets up aliases
+. ~/.bash_profile  # reload our bash_profile file with these new env vars
 mkvirtualenv -p $(which python3) smilecheck  # this creates the virtual environment
 ```
 
