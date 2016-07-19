@@ -43,9 +43,7 @@ prepare_website() {
   cp -r styles/ ~/dev/scc-api/smilecheck/sites/website/static/styles/
   popd
   python ~/dev/static-file-updater.py
-  pushd ~/dev/scc-api/smilecheck/sites/website/static
-  ./djangofy.sh
-  popd
+  pushd ~/dev/scc-api/smilecheck/sites/website/static && ./djangofy.sh && popd
 }
 ```
 
