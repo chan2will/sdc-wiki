@@ -78,8 +78,8 @@ brew services start postgresql  #start postgresql service, if not already starte
 createdb tesseract
 psql tesseract  #opens the postgres interactive terminal
 \du  #view roles and attributes
-ALTER ROLE postgres CREATEROLE
-ALTER ROLE postgres CREATEDB
+ALTER ROLE postgres CREATEROLE;
+ALTER ROLE postgres CREATEDB;
 \du #confirm changes to postgres role
 \q  #exit postgres terminal
 ```
