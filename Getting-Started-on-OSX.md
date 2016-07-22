@@ -71,11 +71,25 @@ python manage.py npm
 ```
 
 ## Set up the database and run the site
+Create database and permission 'postgres' role/user
 ```bash
 cd ~/dev/scc-api/smilecheck
 brew services start postgresql  #start postgresql service, if not already started
+createdb tesseract
+psql tesseract  #opens the postgres interactive terminal
+\du  #view roles and attributes
+ALTER ROLE postgres CREATEROLE
+ALTER ROLE postgres CREATEDB
+\du #confirm changes to postgres role
+\q  #exit postgres terminal
+```
+Configure database
+```
 python manage.py migrate
 python manage.py pyrunner
+```
+Start local server
+```
 python manage.py runserver
 ```
 
