@@ -1,4 +1,6 @@
-> This document updates the tedious manual process of [deploying an incorporated scc website release](https://github.com/CamelotVG/scc-api/wiki/Deploying-an-incorporated-scc-website-release). It assumes you have a conventional directory setup of `~/dev/scc-website`, `~/dev/scc-api`, and a virtual environment `scc-api` with its `setvirtualenvproject` value set to `~/dev/scc-api/smilecheck`.
+> This document assumes you have a conventional directory setup of `~/dev/scc-website`, `~/dev/scc-api`, and a virtual environment `scc-api` with its `setvirtualenvproject` value set to `~/dev/scc-api/smilecheck`, i.e. if you type `workon scc-api`, the virtual environment `scc-api` is activated and you are taken to `~/dev/scc-api/smilecheck`. 
+>
+> **This is essential for this script to work properly.**
 
 Add the following to your `~/.bash_profile` and source it.
 
