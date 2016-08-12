@@ -1,6 +1,8 @@
-> This document assumes you have a conventional directory setup of `~/dev/scc-website`, `~/dev/scc-api`, and a virtual environment `scc-api` with its `setvirtualenvproject` value set to `~/dev/scc-api/smilecheck`, i.e. if you type `workon scc-api`, the virtual environment `scc-api` is activated and you are taken to `~/dev/scc-api/smilecheck`. 
->
-> **This is essential for this script to work properly.**
+> This document makes a few assumptions:
+
+> * You have a conventional directory setup of `~/dev/scc-website` and `~/dev/scc-api`.
+> * The remote repos for both are named `upstream`.
+> * You have a virtual environment `scc-api` with its `setvirtualenvproject` value set to `~/dev/scc-api/smilecheck`, i.e. if you type `workon scc-api`, the virtual environment `scc-api` is activated and you are taken to `~/dev/scc-api/smilecheck`. If that is not the case, `cd` into the `smilecheck` directory and type `setvirtualenvproject`. **This is essential for this script to work properly.**
 
 Add the following to your `~/.bash_profile` and source it.
 
