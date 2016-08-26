@@ -23,6 +23,7 @@ Install `qcachegrind`, then run the profile server:
 ```
 brew install qcachegrind
 brew linkapps qcachegrind
+mkdir /tmp/profile-data
 ./manage.py runprofileserver --kcachegrind --use-cprofile --prof-path=/tmp/profile-data
 ```
 
