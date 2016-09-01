@@ -26,7 +26,8 @@ Test on local server- make an order, make sure everything still works properly. 
 2. `Draft a new release`
 3. Point it to `release`
 4. Tag it as `YYYYMMDD`
-5. Copy tickets from pivotal into description or use diff to notate what has changed
+5. Copy tickets from pivotal into description or use diff to notate what has changed:  
+    `alias release-notes='git log upstream/master..upstream/develop --no-merges --graph --pretty=format:"%s"'`
 6. `Publish`
 7. Create a new PR
 8. base: `master` => compare: `release`
