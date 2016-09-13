@@ -59,7 +59,7 @@ import pwd
 import re
 
 username = pwd.getpwuid(os.getuid()).pw_name
-index_html_location = '/Users/{}/dev/scc-api/smilecheck/sites/website/templates/website/index.html'.format(username)
+index_html_location = '/Users/{}/dev/scc-api/smilecheck/sites/website/templates/website/index_v2.html'.format(username)
 scripts_location = '/Users/{}/dev/scc-api/smilecheck/sites/website/static/scripts'.format(username)
 styles_location = '/Users/{}/dev/scc-api/smilecheck/sites/website/static/styles'.format(username)
 
