@@ -12,7 +12,13 @@ bug/my-branch-name
 chore/my-branch-name
 ```
 
-After finishing the work, push up to `origin` (assuming you have not renamed it):
+After finishing the work, test it locally to make sure it passes all tests:
+
+```shell
+SCCENVIRONMENT=test ./manage.py test --noinput --verbosity=2
+```
+
+...then if the tests pass, push your branch up to `origin` (assuming you have not renamed it):
 ```shell
 git push origin feature/my-new-feature
 ```
@@ -27,3 +33,5 @@ Fixed the widget to supply the baz to the bar. Updated styling supplied by marke
 
 [Finishes #123456789]
 ```
+
+If there are comments made about your code, and you need to update/fix it, make the corrections, then re-push to the same branch. The pull request will automatically detect the new code, and will re-run the unit tests.
