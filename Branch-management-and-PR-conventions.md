@@ -34,4 +34,6 @@ Fixed the widget to supply the baz to the bar. Updated styling supplied by marke
 [Finishes #123456789]
 ```
 
-The pull request will then be reviewed by SDC.  Either it will be accepted and then merged with the code base or there will comments added noting areas of correction.  If there are comments made about your code, and you need to update/fix it, make the corrections, then re-push to the same branch. The pull request will automatically detect the new code on the CamelotVG repo, and will re-run the unit tests.
+The pull request will then be reviewed by SDC.  Either it will be accepted and then merged with the code base or there will comments added noting areas of correction.
+
+If there are comments made about your code, and you need to update/fix it, make the corrections, then re-push to the same branch. The pull request will automatically detect the new code on the CamelotVG repo, and will re-run the unit tests.
