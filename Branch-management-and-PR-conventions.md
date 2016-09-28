@@ -26,6 +26,8 @@ git push origin feature/my-new-feature
 Then you can make a pull request to Camelot's `develop` branch:  
 https://help.github.com/articles/creating-a-pull-request/#creating-the-pull-request
 
+The title of the pull request will be the name of the branch, therefore you will not need to change the title of the pull request.
+
 Be descriptive in the details section, and leave a link to the Pivotal ticket by supplying the id within square brackets, like
 
 ```shell
