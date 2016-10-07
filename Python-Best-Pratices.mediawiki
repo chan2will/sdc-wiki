@@ -1,0 +1,24 @@
+##**Code lay-out : Indentation**
+Use 4 spaces per indentation level.
+Any block of code is identified with indentation level in python.
+
+Aligned with opening delimiter.
+
+    foo = long_function_name(var_one, var_two,
+                         var_three, var_four)
+
+More indentation included to distinguish this from the rest.
+
+    def long_function_name(
+            var_one, var_two, var_three,
+            var_four):
+        print(var_one)
+
+Hanging indents should add a level.
+
+    foo = long_function_name(
+        var_one, var_two,
+        var_three, var_four)
+	
+Spaces are the preferred indentation method.
+	
