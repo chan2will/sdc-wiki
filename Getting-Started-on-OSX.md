@@ -76,6 +76,7 @@ Create database and permission 'postgres' role/user
 cd ~/dev/scc-api/smilecheck
 brew services start postgresql  #start postgresql service, if not already started
 createdb tesseract
+createuser postgres
 psql tesseract  #opens the postgres interactive terminal
 \du  #view roles and attributes
 ALTER ROLE postgres CREATEROLE;
