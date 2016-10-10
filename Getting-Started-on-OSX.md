@@ -60,7 +60,7 @@ git branch -u upstream/develop
 
 ## Activate your virtual environment and install dependencies
 ```bash
-workon scc
+workon smilecheck
 cd ~/dev/scc-api
 pip install -r requirements.txt
 ```
