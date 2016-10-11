@@ -77,6 +77,9 @@ cd ~/dev/scc-api/smilecheck
 brew services start postgresql  #start postgresql service, if not already started
 createdb tesseract
 createuser postgres
+```
+At this point make sure the user postgres has all possible permissions for a user. If you have problems doing this through the postgres console, download pgAdmin. Setup a server pointing to localhost and using the default user created for the tesseract db. This user name/pass should match your system username. Once the server is setup, you can connect and alter the permissions for the postgres user.
+```
 psql tesseract  #opens the postgres interactive terminal
 \du  #view roles and attributes
 ALTER ROLE postgres CREATEROLE;
