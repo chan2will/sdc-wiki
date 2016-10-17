@@ -16,6 +16,7 @@ batch = ShipmentBatch.objects.active().select_related('fulfiller').get(id=1739)
 * Fill in with whatever the ID is of the batch that you want to send. 
 
 file_maker = get_vendor_file_maker(batch=batch)
+
 success = file_maker.transmit(logger=task_logger)
 
 You should see a message saying that the file was transmitted and the batch status should be updated. 
