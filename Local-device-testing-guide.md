@@ -1,5 +1,3 @@
-# Access Django server from a device locally
-
 1. Make sure both machines are on the same local network.
 2. Use an extended version of the `runserver` command to server the Django app: `./manage.py runserver 0.0.0.0:8000`
 3. Determine your computer's ip with `ifconfig`. Look for the IP on `en0`.
