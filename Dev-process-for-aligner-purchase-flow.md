@@ -1,5 +1,5 @@
 1. Make an account on the commerce website.
-2. Complete photo assesment
+2. Complete photo assessment
 3. Logout, Login to `/staff`
 4. Look for the case corresponding to the user you just created in `Waiting on Eval Kit Fullfillment`
 5. Click the case to reveal a sidebar
