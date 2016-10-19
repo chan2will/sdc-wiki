@@ -1,4 +1,4 @@
-1. Make sure both machines are on the same local network.
+1. Make sure both machines are on the same local network. In the office both devices need to be on the `SDC Secure` network.
 2. Use an extended version of the `runserver` command to server the Django app: `./manage.py runserver 0.0.0.0:8000`
 3. Determine your computer's ip with `ifconfig`. Look for the IP on `en0`.
 4. Manually enter `<your_ip>:8000` in any device to access your local server.
