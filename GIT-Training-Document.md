@@ -2,7 +2,6 @@
 * History
 * Introduction
 * Git Basic & Installation
-* GIT Work flow
 * Staging Area
 * Setup & Configuration
 * Getting & Creating Projects
@@ -36,15 +35,12 @@ One of the nicest features of any Distributed SCM, Git included, is that it's di
 * With Git Bash you’ll be able to use a number of UNIX command line tools along with access to Git and can run it by right clicking mouse on the desktop, and selecting Git Bash from pop up window.
 * TortoiseGit is a widely used Git client for windows. TortoiseGit is a free open-source client for the Git version control system.
 
-## **4. GIT Work flow:**
-
-## **5. Staging Area:**
+## **4. Staging Area:**
 1. Unlike the other systems, Git has something called the "staging area" or "index". This is an intermediate area where commits can be formatted and reviewed before completing the commit.
 2. Add selected changes to the something called the staging area and after wards we commit the changes stored in the staging area to the repository
 
-![](D:\1.jpg)
 
-## **6. Setup and configurations:**
+## **5. Setup and configurations:**
 ### **Configuration**
 Use –global to set the configuration for all projects. If git config is used without –global and run inside a project directory, the settings are set for the specific project.
 
@@ -55,7 +51,7 @@ Get help for a specific git command
 
     * git help clone
 
-## **7. Getting and Creating Projects:**
+## **6. Getting and Creating Projects:**
 
 ### **git -version**
 
@@ -74,7 +70,7 @@ Clone a repository into a new directory
     * git clone repository-url
       Ex: git clone git@github.com: srinivasbapathu/scc-api.git
 
-## **8. Basic Snapshot:**
+## **7. Basic Snapshot:**
 
 ### **git-add**
 
