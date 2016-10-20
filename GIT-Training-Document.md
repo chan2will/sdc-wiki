@@ -1,4 +1,4 @@
-CONTENTS:
+**CONTENTS:**
 * History
 * Introduction
 * Git Basic & Installation
@@ -8,7 +8,7 @@ CONTENTS:
 * Getting & Creating Projects
 * Basic Snapshot
 
-1. History:
+**1. History:**
 Git is a widely used version control systems for software development. 
 Git was initially designed and developed by Linus Torvalds for Linux kernel development in April 2005 (10 years ago).
 Git is primarily developed on Linux, although it also supports most major operating systems including BSD, Solaris, OS X, and Microsoft Windows.
