@@ -1,12 +1,12 @@
 CONTENTS:
-History
-Introduction
-Git Basic & Installation
-GIT Work flow
-Staging Area
-Setup & Configuration
-Getting & Creating Projects
-Basic Snapshot
+* History
+* Introduction
+* Git Basic & Installation
+* GIT Work flow
+* Staging Area
+* Setup & Configuration
+* Getting & Creating Projects
+* Basic Snapshot
 
 1. History:
 Git is a widely used version control systems for software development. 
