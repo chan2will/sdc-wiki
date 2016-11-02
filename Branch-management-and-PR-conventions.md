@@ -36,9 +36,9 @@ The title of the pull request will be the name of the branch, therefore you will
 Be descriptive in the details section, and leave a link to the Pivotal ticket by supplying the id within square brackets, like
 
 ```shell
-Fixed the widget to supply the baz to the bar. Updated styling supplied by marketing.
+Fixes the widget to supply the baz to the bar. Updates styling supplied by marketing.
 
-[Finishes #123456789]
+Finishes [#123456789]
 ```
 
 The pull request will then be reviewed by SDC.  Either it will be accepted and then merged with the code base or there will comments added noting areas of correction.
