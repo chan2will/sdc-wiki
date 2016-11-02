@@ -33,13 +33,7 @@ https://help.github.com/articles/creating-a-pull-request/#creating-the-pull-requ
 
 The title of the pull request will be the name of the branch, therefore you will not need to change the title of the pull request.
 
-Be descriptive in the details section, and leave a link to the Pivotal ticket by supplying the id within square brackets, like
-
-```shell
-Fixes the widget to supply the baz to the bar. Updates styling supplied by marketing.
-
-Finishes [#123456789]
-```
+Fill out the given pull request template with appropriate info and end it with a link to the Pivotal tracker ID
 
 The pull request will then be reviewed by SDC.  Either it will be accepted and then merged with the code base or there will comments added noting areas of correction.
 
