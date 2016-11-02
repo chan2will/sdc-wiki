@@ -1,4 +1,9 @@
-Always work on a fresh branch based off of `upstream`'s `develop` branch.
+Start off with your own fork of `scc-api` repo by forking it from the page:  
+<img src="http://i.imgur.com/umwdmL2.png" width="200">  
+
+> In the following, `upstream` will refer to `scc-api` repo on CamelotVG's account, and `origin` will refer to the `scc-api` repo on your own personal account.
+
+Then from your own fork, work on a fresh branch based off of `upstream`'s `develop` branch.
 
 ```shell
 git remote update --prune
