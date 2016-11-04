@@ -8,7 +8,7 @@
 8. View Case, set to waiting on materials, submit
 9. Status materials received, submit
 10. Status materials accepted, submit
-11. Status waiting on photos after stl, submit
+11. Status setup in progress, submit
 12. Status setup ready for review, submit
 13. Status setup approved, submit
 14. At this point the patient should be status `Waiting on Aligner Purchase` (`current_status_id == WAITALGNPURCH` from `cases_case` table)
