@@ -9,7 +9,7 @@ To get access to the Silverpop interface you can request credentials from Jon Ha
 # Silverpop Data
 We currently use two main data structures in SP, and these are replicated for each environment, DEV, STAGING, and PROD.  LOCAL and TEST use the same databases as DEV.
 
-![Silverpop Database List](http://imgur.com/a/4vUjz)
+![Silverpop Database List](http://i.imgur.com/NO5V43V.png)
 
 *SCC_MASTER*
 This is the original (old) database created, and is referred to as a "flat table" because it is one table with lots of columns.  The dev/staging/testing replica is called 'Staging_Master' (yes, the name is confusing).  All info about a contact (email address) is listed in this single table.  To add info just add a new column.
