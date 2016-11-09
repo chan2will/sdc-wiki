@@ -4,17 +4,17 @@ Silverpop is our email marketing tool, which is part of the IBM Marketing Cloud.
 * Sending data from our database to SP via FTP and the XML API
 * Marketing writes queries on the SP data to create audiences and email campaigns
 
-To get access to the Silverpop interface you can request credentials from Jon Hansen or Josh Michael.  It is also possible to use the FTP username and password listed in our `service_access.yaml` file, but it will require you to validate your IP address by sending an email and pass code to software@smiledirectclub.com.  If you have access to Meldium (password manager) you can login to the email account and retrieve the pass code.
+Visit https://login3.silverpop.com to access the Silverpop interface.  You can (1) request credentials from Jon Hansen or Josh Michael, or (2) use the FTP username and password listed in our `service_access.yaml` file.  Option 2 will require you to validate your IP address by sending an email and pass code to software@smiledirectclub.com.  If you have access to Meldium (password manager) you can login to the email account and retrieve the pass code.
 
 # Silverpop Data
 We currently use two main data structures in SP, and these are replicated for each environment, DEV, STAGING, and PROD.  LOCAL and TEST use the same databases as DEV.
 
 ![Silverpop Database List](http://i.imgur.com/NO5V43V.png)
 
-*SCC_MASTER*
+**SCC_MASTER**: 
 This is the original (old) database created, and is referred to as a "flat table" because it is one table with lots of columns.  The dev/staging/testing replica is called 'Staging_Master' (yes, the name is confusing).  All info about a contact (email address) is listed in this single table.  To add info just add a new column.
 
-*SDC_PROD*
+**SDC_PROD**: 
 This is the new "relational" database, which consists of a database and associated relational tables.  This basically works how you expect a database to work.  SDC_PROD has the following associated tables: PROD_LEADS, PROD_ORDERS, PROD_CASES, and PROD_ORDER_ITEMS.
 
 
