@@ -14,9 +14,11 @@ We currently use two main data structures in SP, and these are replicated for ea
 **SCC_MASTER**: 
 This is the original (old) database created, and is referred to as a "flat table" because it is one table with lots of columns.  The dev/staging/testing replica is called 'Staging_Master' (yes, the name is confusing).  All info about a contact (email address) is listed in this single table.  To add info just add a new column.
 
-**SDC_PROD**: 
-This is the new "relational" database, which consists of a database and associated relational tables.  This basically works how you expect a database to work.  SDC_PROD has the following associated tables: PROD_LEADS, PROD_ORDERS, PROD_CASES, and PROD_ORDER_ITEMS.
+**SDC-PROD**: 
+This is the new "relational" database, which consists of a database and associated relational tables.  This basically works how you expect a database to work.  SDC-PROD has the following associated tables: PROD-LEADS, PROD-ORDERS, PROD-CASES, and PROD-ORDER-ITEMS.
 
+**SDC-PROD-B**:
+Duplication of SDC-PROD, with exact same relational tables.  The goal is to use a separate IP address when sending emails from this database, in the case that our other IP address gets marked as spam.
 
 ## To remove all contacts from a database
 
