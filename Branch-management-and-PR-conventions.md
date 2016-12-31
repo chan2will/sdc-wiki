@@ -23,10 +23,11 @@ After finishing the work, test it locally to make sure it passes all tests:
 SCCENVIRONMENT=test ./manage.py test --noinput --verbosity=2
 ```
 
-...then if the tests pass, push your branch up to `origin` (assuming you have not renamed it):
+...then if the tests pass, push your branch up to `upstream` (assuming you have not renamed it):
 ```shell
-git push origin feature/my-new-feature
+git push upstream feature/my-new-feature
 ```
+NB: the purpose of pushing to upstream rather than origin is to allow others to more easily work on this pushed branch.  If the branch had been pushed to origin, then others would have to create a new `remote` on their local machine.
 
 Then you can make a pull request to Camelot's `develop` branch:  
 https://help.github.com/articles/creating-a-pull-request/#creating-the-pull-request
