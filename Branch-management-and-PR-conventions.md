@@ -41,8 +41,8 @@ The pull request will then be reviewed by SDC.  Either it will be accepted and t
 If there are comments made about your code, and you need to update/fix it, make the corrections, then re-push to the same branch. The pull request will automatically detect the new code on the CamelotVG repo, and will re-run the unit tests.
 
 
+<br><br><br><br>
 
 
-
-For Levity:
+For Levity:<br>
 ![Kitten Pic](https://pbs.twimg.com/media/C1GXoGAWgAACFtn.jpg:large)
