@@ -32,7 +32,7 @@ NB: the purpose of pushing to upstream rather than origin is to allow others to 
 Then you can make a pull request to Camelot's `develop` branch:  
 https://help.github.com/articles/creating-a-pull-request/#creating-the-pull-request
 
-The title of the pull request will be the name of the branch, therefore you will not need to change the title of the pull request.
+The title of the pull request will be the name of the branch, therefore you will not need to change the title of the pull request.  Include the the number of the Jira ticket at beginning of the title.  e.g.: `ENG-554 Fixes insurance form error display on the insurance provider dropdown`
 
 Fill out the given pull request template with appropriate info and end it with a link to the Pivotal tracker ID.
 
