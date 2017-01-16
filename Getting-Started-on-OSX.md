@@ -58,6 +58,17 @@ git remote update
 git branch -u upstream/develop
 ```
 
+##Fix the openssl issue and sym link to the appropriate files
+```bash
+brew doctor
+brew update
+brew upgrade
+brew install openssl
+cd /usr/local/include
+ln -s ../opt/openssl/include/openssl .
+export CRYPTOGRAPHY_ALLOW_OPENSSL_098=1
+```
+
 ## Activate your virtual environment and install dependencies
 ```bash
 workon smilecheck
