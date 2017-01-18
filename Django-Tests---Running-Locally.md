@@ -1,4 +1,4 @@
-For when you want to run your tests locally, here are some nice aliases from HPT, delivered by Eric Hamiter.
+For when you want to run your tests locally, here are some nice aliases:
 
 ```
 alias pmt="SCCENVIRONMENT=test ./manage.py test --keepdb --noinput --verbosity=2"
