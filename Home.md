@@ -21,6 +21,7 @@
 * [Selenium IDE automation](selenium-ide-automation)
 
 ## Smilecheck systems & processes
+* [Smilecheck Support Guide](https://docs.google.com/a/smiledirectclub.com/document/d/1yOQlFv5zWAD2UUKCKX-nFnhuTvSKFa9qNhBYv9mtXiI/edit?usp=sharing)
 * [Data Model Overview](data-model-overview)
 * [Dev process for aligner purchase flow](dev-process-for-aligner-purchase-flow)
 * [Generating store schedule slots](generating-store-schedule-slots)
