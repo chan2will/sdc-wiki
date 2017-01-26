@@ -1,4 +1,4 @@
-Go to `http://localhost:8000/provider/cases/?impersonate=[username]`, replacing `[username]` with the username of a hygienist. For the time being, usernames are email addresses. Example:
+Go to `http://localhost:8000/provider/cases/?impersonate=[username]`, replacing `[username]` with the username of a provider. For the time being, usernames are email addresses. Example:
 
 ```
 http://localhost:8000/provider/cases/?impersonate=dr.dowling@daviddowlingortho.com
