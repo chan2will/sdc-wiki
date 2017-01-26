@@ -15,4 +15,5 @@ SELECT pu.provider_id, pu.user_id, u.username, p.kind, p.corporate_provider, u.r
 FROM providers_provider_user pu
 LEFT JOIN providers_provider p ON pu.provider_id = p.id
 LEFT JOIN profiles_user u ON pu.user_id = u.id
-WHERE pu.date_removed IS NULL```
+WHERE pu.date_removed IS NULL
+```
