@@ -1,3 +1,7 @@
+## This is a living document. 
+
+Follow this guide to get your machine up and running -- as libraries are updated and software is upgraded, some of the instructions below may lead to new errors or not install successfully. Your task is to discover new solutions if problems arise, and to document your solutions below so the next developer won't have to stumble along the same path.
+
 ## Install a variety of developer tools
 
 ```bash
