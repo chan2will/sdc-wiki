@@ -17,9 +17,16 @@ Impersonation works in all environments, including production. Be careful.
 Not all providers can be impersonated—only those who have a `providers_provider_user` record. To get a list of impersonatable providers, use the following query:
 
 ```
-SELECT pu.provider_id, pu.user_id, u.username, p.kind, p.corporate_provider, u.role
-FROM providers_provider_user pu
-LEFT JOIN providers_provider p ON pu.provider_id = p.id
-LEFT JOIN profiles_user u ON pu.user_id = u.id
+SELECT
+  pu.provider_id,
+  pu.user_id,
+  u.username,
+  p.account_name,
+  p.kind,
+  p.corporate_provider,
+  u.role
+FROM      providers_provider_user pu
+LEFT JOIN providers_provider      p  ON p.id = pu.provider_id
+LEFT JOIN profiles_user           u  ON u.id = pu.user_id
 WHERE pu.date_removed IS NULL
 ```
