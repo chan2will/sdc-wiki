@@ -14,7 +14,7 @@ http://localhost:8000/provider/cases/?impersonate
 
 Impersonation works in all environments, including production. Be careful.
 
-To find a list of impersonatable providers, use the following query:
+To get a list of impersonatable providers, use the following query:
 
 ```
 SELECT pu.provider_id, pu.user_id, u.username, p.kind, p.corporate_provider, u.role
