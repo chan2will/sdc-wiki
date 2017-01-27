@@ -6,6 +6,8 @@
 * [AWS](https://smiledirectclub.signin.aws.amazon.com/console)
 * [LogEntries](https://logentries.com/app/1a50e275#/sets)
 * [Sentry](https://app.getsentry.com/smiledirectclub/)
+* [New Relic](https://rpm.newrelic.com/accounts/1031548/)
+* [Meldium](https://launchpad.meldium.com/#/launchpad)
 * Share files in Google `data-migrations` folder:
 	* CurrentCampaigns
 	* EchosignDocuments
@@ -17,5 +19,3 @@
 	* Shipment Tracking File
 	* Stores
 	* Workqueues
-* [New Relic](https://rpm.newrelic.com/accounts/1031548/)
-* [Meldium](https://launchpad.meldium.com/#/launchpad)
