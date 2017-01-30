@@ -112,6 +112,9 @@ Start local server
 python manage.py runserver
 ```
 
+## Sample bash profile / prompt - useful aliases, shows branch name & virtualenv in your prompt, etc.
+https://gist.github.com/ehamiter/735c68e04fb398fb177b6252c5386963
+
 ## Useful applications for development
 ```bash
 install chrome browser: https://www.chrome.com
