@@ -97,7 +97,7 @@ At this point make sure the user postgres has all possible permissions for a use
 ```
 psql tesseract  #opens the postgres interactive terminal
 \du  #view roles and attributes
-ALTER ROLE postgres CREATEROLE;  #This may not be necessary if you used pgAdmin to set the roles for this user
+ALTER ROLE postgres CREATEROLE;  # This may not be necessary if you used pgAdmin to set the roles for this user
 ALTER ROLE postgres CREATEDB;
 \du #confirm changes to postgres role
 \q  #exit postgres terminal
@@ -105,6 +105,7 @@ ALTER ROLE postgres CREATEDB;
 Configure database
 ```
 python manage.py migrate
+python manage.py restore_data    # this process will take some time
 python manage.py pyrunner
 ```
 Start local server
