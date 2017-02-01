@@ -121,4 +121,5 @@ https://gist.github.com/ehamiter/735c68e04fb398fb177b6252c5386963
 install chrome browser: https://www.chrome.com
 install pyCharm: https://www.jetbrains.com/pycharm/
 install pgAdmin: https://www.pgadmin.org/download/
+install postico: https://eggerapps.at/postico/
 ```
