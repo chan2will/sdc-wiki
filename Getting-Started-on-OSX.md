@@ -104,8 +104,8 @@ ALTER ROLE postgres CREATEDB;
 ```
 Configure database
 ```
-python manage.py migrate
 python manage.py restore_data    # this process will take some time
+python manage.py migrate
 python manage.py pyrunner
 ```
 Start local server
