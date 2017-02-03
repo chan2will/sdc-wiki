@@ -6,6 +6,7 @@
 * [Branch management and PR conventions](branch-management-and-pr-conventions)
 * [Git Config](git-config)
 * [Dev chrome plugin](https://chrome.google.com/webstore/detail/sdc-dev-plugin/hecaabcfigbombfmhihgiggpdcompcnl)
+* [Sending emails from localhost](Sending-emails-from-localhost)
 
 ## Training
 * [Docker Training Course](docker-training-course)
