@@ -1,3 +1,15 @@
+**New Method**
+
+There is now a Django management command for populating a User, Case, etc. ready to order aligners.  In the console, use the following command:
+* `$ ./manage.py create_case <new_user_email_address@mail.com> <password>`
+
+Example: `$ ./manage.py create_case sdc_test_user_123@mail.com examplepassword`
+
+The code for this management command is in `cases.management.commands.create_case`.
+
+
+**Old Method**
+
 1. Make an account on the commerce website.
 2. Complete photo assessment
 3. Logout, Login to `/staff`
