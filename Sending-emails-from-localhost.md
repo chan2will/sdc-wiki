@@ -1,4 +1,4 @@
-By default, emails get sent to a directory in your OS temporary files dir. To change that, open up `/smilecheck/settings/local.py` and look for the following lines:
+By default, emails get saved to a subdirectory of your OS temporary files dir (`/tmp`) rather than sent anywhere. To change that, open up `/smilecheck/settings/local.py` and look for the following lines:
 
 ```
 # Default is to use filebased email backend
