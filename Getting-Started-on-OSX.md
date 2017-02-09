@@ -99,6 +99,7 @@ psql tesseract  #opens the postgres interactive terminal
 \du  #view roles and attributes
 ALTER ROLE postgres CREATEROLE;  # This may not be necessary if you used pgAdmin to set the roles for this user
 ALTER ROLE postgres CREATEDB;
+ALTER ROLE postgres SUPERUSER;
 \du #confirm changes to postgres role
 \q  #exit postgres terminal
 ```
