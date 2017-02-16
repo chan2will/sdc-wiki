@@ -70,7 +70,7 @@ brew upgrade
 brew install openssl
 cd /usr/local/include
 ln -s ../opt/openssl/include/openssl .
-export CRYPTOGRAPHY_ALLOW_OPENSSL_098=1
+export CRYPTOGRAPHY_ALLOW_OPENSSL_098=1 # this command should be placed in .bashrc or comparable file 
 ```
 
 ## Activate your virtual environment and install dependencies
