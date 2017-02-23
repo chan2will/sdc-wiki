@@ -27,7 +27,7 @@ DEPLOYED: STAGING Vulcan with SHA <copy-this-SHA-that-exists-here> ---- GITHUB
 1. In GitHub, click on `releases`
 2. `Draft a new release`
 3. Point it to `release`
-4. Tag it as `YYYYMMDD`, title in `Release YYYYMMDD`
+4. Tag it as `YYYYMMDD`, title it `Release YYYYMMDD`
 5. In Jira, go to the Releases, click the release number, then click the release notes link. Copy and paste these notes into GitHub's textarea.
 6. `Publish`
 7. Create a new PR
