@@ -27,12 +27,12 @@ DEPLOYED: STAGING Vulcan with SHA <copy-this-SHA-that-exists-here> ---- GITHUB
 1. In GitHub, click on `releases`
 2. `Draft a new release`
 3. Point it to `release`
-4. Tag it as `YYYYMMDD`
+4. Tag it as `YYYYMMDD`, title in `Release YYYYMMDD`
 5. In Jira, go to the Releases, click the release number, then click the release notes link. Copy and paste these notes into GitHub's textarea.
 6. `Publish`
 7. Create a new PR
 8. base: `master` => compare: `release`
-9. Title should be `Release/YYYYMMDD`
+9. Title should be `Release/YYYYMMDD`, description should be the release notes.
 10. Merge PR
 11. Confirm merge
 12. Delete `release` branch
