@@ -26,6 +26,7 @@ We have a store spreadsheet. It is not environment restricted. So if you change 
 5. Once you get the thumbs up, the data can be run into prod. You will need to complete some of the pyrunner or data manipulation mentioned above. It is always good to test one zipcode live before adding all of them. Usually Jessica or Jordan are willing to book an appointment in prod to test and see the email. 
 
 **CHANGING HOURS**:
+
 Extending Hours:
 * If the store hours are extending (staying open later or starting earlier), there is not a good way to just tack on a few extra slots. You'll need to change the times in the spreadsheet and run pyrunner. Test locally and in staging. This will work for slots that have not been generated yet. The only way that I know of to change that times of slots already generated is to logically delete the existing slots and generate new slots. This becomes problematic when there are already appointments booked in the slots which is why it is very nice to have 3 weeks notice for this (not that you'll get it). You'll need to keep track of the current appointments on each day and reschedule them in the new slots. Potentially, if the slots start earlier, the appointment times may start at different times which means that the scheduling department should call the customers. 
 
