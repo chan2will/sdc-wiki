@@ -29,6 +29,7 @@
 * [Dev process for aligner purchase flow](dev-process-for-aligner-purchase-flow)
 * [Generating store schedule slots](generating-store-schedule-slots)
 * [SDC Staff and Provider Portals Overview](https://docs.google.com/a/smiledirectclub.com/document/d/1QrgaqUL7-z7TRSIkL23vZD91hDHcbbGO6ZhcriaVc-M/edit?usp=sharing)
+* [Smile Shops](smile-shops)
 * [Impersonating providers](impersonating-providers)
 * [Naming Standards](naming-standards)
 
