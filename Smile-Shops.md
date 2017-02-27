@@ -1,5 +1,3 @@
-2/24/2017
-
 SmileShop data is populated into the database from our shared google spreadsheet by using pyrunner -xf 0009_stores.py. 
 
 This worked fairly well for getting the original stores up and running quickly. It has become unwieldy when trying to manage all the new stores. Hopefully SAMS (Store Appointment Management System) will help fix many of the issues. 
