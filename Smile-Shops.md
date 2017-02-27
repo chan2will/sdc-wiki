@@ -48,6 +48,23 @@ THINGS TO KNOW:
 * We have a nightly task (DailySchedulingSlotsTask) that runs and generates slots for the next 18 days for all the slots. Sometimes this has unexpected consequences if adding new hours, stores, or chairs. Task is located in core/locations/tasks.py  
  
 
+HANDY CODE SNIPPETS (probably could be made better):
+    
+    _Example for grabbing appointment slots_
+    slots = StoreAppointmentSlot.objects.filter(slot_month=9, slot_day__in=[17], slot_year=2016, slot_hour__in=[12], slot_minute=30,  store_calendar__store_id=4)
 
+    slots = StoreAppointmentSlot.objects.filter(slot_month=9, slot_day__in=[17], slot_year=2016, slot_hour__in=[19], store_calendar__store_id=4, store_calendar__name__in=['Chair 4', 'Chair 5', 'Chair 6'],current_status_id='OPEN')
+    
+    _Locking slots_
+    for slot in slots:
+      slot.set_status(‘LOCKED’)   #deleting slots is similar but slot.delete()
+      slot.save()
+
+    If you have added a chair and want to generate the slots for that chair
+    store = Store.objects.filter(id=4)
+    num_days = 1  (however many days of slots you want to generate from the date_begin)
+    date_begin = '2017-03-16'
+    for s in store:
+      store.create_slots(date_begin=date_begin, num_days=num_days)
 
 
