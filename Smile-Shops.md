@@ -2,10 +2,22 @@ SmileShop data is populated into the database from our shared google spreadsheet
 
 This worked fairly well for getting the original stores up and running quickly. It has become unwieldy when trying to manage all the new stores. Hopefully SAMS (Store Appointment Management System) will help fix many of the issues. The current store appointment system is setup on the concept of generating set appointment slots that get booked by staff and customers. Once slots are generated, it is challenging to change them. 
 
+StoreAppointment Model: 
+* Contains the customers appointment status
+* Has an FK to a specific StoreAppointmentSlot
+
+StoreAppointmentSlot:
+* Contains the date and time of the appointment
+* Has a FK to the StoreCalendar (specific store chair)
+
 Appointment slots have 3 statuses OPEN, LOCKED, BOOKED. 
 OPEN - it can be booked 
 LOCKED - cannot book (staff can override this in the staff portal) 
 BOOKED - appointment is booked 
+
+StoreCalendar:
+* These are essentially the chairs in the store
+
 
 ISSUES WITH CURRENT SYSTEM: 
 * Very little flexibility for changing store, chair, day hours (which happens a lot at SDC)
