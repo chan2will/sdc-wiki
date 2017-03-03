@@ -75,12 +75,13 @@ script.
 
 After that, the Align tool decodes that string, and sends it with the `Asset` creation method, which stores the file-like object in Truevault. All of this happens in the `create_acceptance_screenshot` method in the Align tools class. This screenshot will be stored for use later. Once a customer actually purchases Aligners, a ClinCheck acceptance call will be sent to Align's system letting them know a case is ready to manufacture.
 
-```            if waffle.flag_is_active(request, 'set-align-order-status'):
-                case = self.case
+```            
+if waffle.flag_is_active(request, 'set-align-order-status'):
+    case = self.case
 
-                if case.prescription.lab == 'AL':
-                    align = Align()
-                    align.set_case_status(request.user, case, 'approve')
+    if case.prescription.lab == 'AL':
+        align = Align()
+        align.set_case_status(request.user, case, 'approve')
 ```
 
 The `set_case_status` method, passing action approve, will grab the relevant case asset and pass it along. Once this happens, we are done with our programmatic interactions. ALign will manufacture and ship the order to us, and from there it goes through the normal fulfillment process.
