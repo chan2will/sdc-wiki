@@ -142,7 +142,8 @@ WHERE cp.category='ALIGNER'
   ORDER BY "Order Date" desc
 ```
 
-```import csv, requests
+```
+import csv, requests
 from collections import OrderedDict
 
 from core.profiles.models import User
@@ -252,7 +253,8 @@ AND c.case_number IN ('C9d90c51086f07')
 LIMIT 1
 ```
 
-```import csv, requests
+```
+import csv, requests
 from collections import OrderedDict
 
 from core.profiles.models import User
