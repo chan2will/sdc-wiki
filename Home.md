@@ -23,15 +23,16 @@
 * [Selenium IDE automation](selenium-ide-automation)
 
 ## Smilecheck systems & processes
-* [Smilecheck Support Guide](https://docs.google.com/a/smiledirectclub.com/document/d/1yOQlFv5zWAD2UUKCKX-nFnhuTvSKFa9qNhBYv9mtXiI/edit?usp=sharing)
 * [Case Workflow](case-workflow)
 * [Data Model Overview](data-model-overview)
 * [Dev process for aligner purchase flow](dev-process-for-aligner-purchase-flow)
 * [Generating store schedule slots](generating-store-schedule-slots)
-* [SDC Staff and Provider Portals Overview](https://docs.google.com/a/smiledirectclub.com/document/d/1QrgaqUL7-z7TRSIkL23vZD91hDHcbbGO6ZhcriaVc-M/edit?usp=sharing)
-* [Smile Shops](smile-shops)
 * [Impersonating providers](impersonating-providers)
 * [Naming Standards](naming-standards)
+* [Editing Permissions and Smilecheck Users](editing-permissions-and-smilecheck-users)
+* [SDC Staff and Provider Portals Overview](https://docs.google.com/a/smiledirectclub.com/document/d/1QrgaqUL7-z7TRSIkL23vZD91hDHcbbGO6ZhcriaVc-M/edit?usp=sharing)
+* [Smilecheck Support Guide](https://docs.google.com/a/smiledirectclub.com/document/d/1yOQlFv5zWAD2UUKCKX-nFnhuTvSKFa9qNhBYv9mtXiI/edit?usp=sharing)
+* [Smile Shops](smile-shops)
 
 ## Design
 * [Back End Style Guide](back-end-style-guide)
