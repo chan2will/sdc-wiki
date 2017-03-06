@@ -1,10 +1,12 @@
 We use Django auth.
 
+ADDING A NEW USER:
+
+Always double check that they do not already have a user account. Sometimes duplicate tickets are submitted. If you don't have all the information you need, please ask the requester or someone that you think will know. 
+
 **Username**: Their firstname.lastname@smiledirectclub.com
 * If they have more than 2 names, please consult with whoever submitted the ticket for the appropriate username. 
 **Password**: In prod, it should be set as smilecheck by the system. They will be required to reset on first login to the staff portal. In other environments, it should default to letmein. 
-
-Generally, engineering users are made superusers
 
 For SmileShop/Retail User:
 * auth_group - Patient Care Specialist
@@ -43,9 +45,6 @@ You can consult the employee spreadsheet for further titles, departments, and au
 
 If someone submits a request for access to the reports page, assign them to the Reports-Super auth_group. 
 If someone submits a request for access to the operations, shipping batch page, assign them the one-off permission of 'can view shipment batch'
-
-Need to add further permission information...
-
 
 
 
