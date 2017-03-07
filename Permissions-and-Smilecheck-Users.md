@@ -1,7 +1,12 @@
 We use Django auth.
 
-ADDING A NEW USER:
+DEACTIVATING/TERMINATING SMILECHECK ACCOUNT:
+* Go to their account in the django admin (profiles/useraccount)
+* Uncheck the Active box and save. 
+* Reply to ticket saying that their useraccount is deactivated. 
+* More steps need to be taken if an engineering account. Will most likely need to be handled by an admin. 
 
+ADDING A NEW USER:
 Always double check that they do not already have a user account. Sometimes duplicate tickets are submitted. If you don't have all the information you need, please ask the requester or someone that you think will know. 
 
 **Username**: Their firstname.lastname@smiledirectclub.com
