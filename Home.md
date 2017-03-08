@@ -33,6 +33,7 @@
 * [SDC Staff and Provider Portals Overview](https://docs.google.com/a/smiledirectclub.com/document/d/1QrgaqUL7-z7TRSIkL23vZD91hDHcbbGO6ZhcriaVc-M/edit?usp=sharing)
 * [Smilecheck Support Guide](https://docs.google.com/a/smiledirectclub.com/document/d/1yOQlFv5zWAD2UUKCKX-nFnhuTvSKFa9qNhBYv9mtXiI/edit?usp=sharing)
 * [Smile Shops](smile-shops)
+* [Processing backlogged email messages](fixing-backlog-of-emailmessages)
 
 ## Design
 * [Back End Style Guide](back-end-style-guide)
