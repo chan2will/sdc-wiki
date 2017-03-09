@@ -34,6 +34,7 @@
 * [Smilecheck Support Guide](https://docs.google.com/a/smiledirectclub.com/document/d/1yOQlFv5zWAD2UUKCKX-nFnhuTvSKFa9qNhBYv9mtXiI/edit?usp=sharing)
 * [Smile Shops](smile-shops)
 * [Processing backlogged email messages](fixing-backlog-of-emailmessages)
+* [Label Printer](label-printer)
 
 ## Design
 * [Back End Style Guide](back-end-style-guide)
