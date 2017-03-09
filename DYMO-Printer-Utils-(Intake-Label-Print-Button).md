@@ -47,9 +47,9 @@ Upon navigating to `scc-api/smilecheck/sites/staff/labelTemplates`, you'll see a
 
 ![screen shot 2017-03-08 at 11 24 58 am](https://cloud.githubusercontent.com/assets/8734556/23715345/e6d585b2-03f1-11e7-9813-5f2c72466d40.png)
 
-Should you open these documents in your code editor, you will likely conclude that their editing & manipulation are burdensome tasks to be avoided for as long as possible. But fear not, intrepid developer! When you installed the giant DYMO software suite earlier, you also installed a shining champion: `DYMO Label`, a GUI-based utility that has been waiting, ever vigilant, to deliver you from this XML madness.
+Should you open one of these documents in your code editor, you will likely conclude that its manipulation is a burdensome task best avoided for as long as possible. But fear not, intrepid developer! When you installed the giant DYMO software suite earlier, you also installed a shining champion: `DYMO Label`, a GUI-based utility that has been waiting, ever vigilant, to deliver you from this xml madness.
 
-In order to use it, first change the template to edit's file extension from `.xml` to `.label`. This step is needed; `DYMO Label` will refuse to open an xml document. `DYMO Label`'s hook into the OS should kick in, and the file should then be offered up as a `DYMO Label` file.
+In order to use it, first change the template's file extension from `.xml` to `.label`. This step is needed; `DYMO Label` will refuse to open an xml document. `DYMO Label`'s hook into the OS should kick in, and the file should then be offered up as a `DYMO Label` file.
 
 ![screen shot 2017-03-08 at 11 27 26 am](https://cloud.githubusercontent.com/assets/8734556/23715892/e12dec6a-03f3-11e7-91d8-77b2ced3de43.png)
 
@@ -65,9 +65,11 @@ Another important note is that these are four separate text areas. You can creat
 
 ![screen shot 2017-03-08 at 6 20 11 pm](https://cloud.githubusercontent.com/assets/8734556/23730218/f1f447b4-042b-11e7-8931-26ba39840192.png)
 
-The file you receive, if that's what you're updating, will probably have only one text area that has a bunch of different fields in it. It would be possible to keep things that way and join strings together to inject into the single text area, but I figure it's more straightforward to keep them separate and format each one individually per label type (explanation to follow in the next section). I also figure it's best to keep each one in its own row as pictured, since setting up code to dynamically resize text areas within the xml document in case some string (patient name, for example) winds up being unusually long would probably be an unwise investment of developer time. Each string having its own row will prevent anything spilling out into other text areas.
+The file you receive, if that's what you're updating, will probably have only one text area that has a bunch of different fields in it. It would be possible to keep things that way and join strings together to inject into the single text area, but I figure it's more straightforward to keep them separate and format each one individually per label type (explanation to follow in the next section).
 
-Save the document and rename the file extension to `.xml`, and you should be set.
+I also figure it's best to keep each one in its own row as pictured, since setting up code to dynamically resize text areas within the xml document, in case some string (patient name, for example) winds up being unusually long, would probably be an unwise investment of developer time. Giving each string its own row will prevent potential string territory encroachments.
+
+Save the document and rename the file extension to `.xml`, and you should be all set.
 
 ## Code
 
