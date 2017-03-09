@@ -1,5 +1,3 @@
-# Intake Label Printing
-
 ## Introduction
 Ever noticed this button in the staff portal? It's on the case details page:
 
