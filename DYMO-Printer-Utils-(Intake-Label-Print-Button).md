@@ -81,14 +81,14 @@ You'll primarily be looking at:
 `smilecheck/sites/staff/static/staff/js/DYMOLabelFramework.js` is the third-party (minified) JS that provides the interface to the printer (server).
 
 Anyway, `cases.py`, starting from around line 152, has code that sets up the labels to be printed. You'll see a `label_data` variable that contains `templatesPrintData` that's an array of print data for each label to be printed when the button is pressed. There's also `templateStringData` that collects info from the case to be injected into each label template. Everything should be straightforward, just note that the sizes are as follows (these are named after the label types):
-`s-9629` is a smaller label, while
-`s-11286` is larger, rather like a name tag.
+* `s-9629` is a smaller label, while
+* `s-11286` is larger, rather like a name tag.
 
 That data gets fed to the template & converted to JS via JSON, where a `date` object is appended to the `templateStringData` in order to be formatted & included on the label.
 
 Moving on to `labelUtils.js`: you shouldn't need to mess with this too much, just know that it uses jQuery to traverse the xml document, searching for strings whose text (which you set in `DYMO Label`) matches keys in the `templateStringData` object passed to it.
 
-Additionally, if you need to include more text around one of the templateStringData object's values, you can add a function to `Template.prototype.stringFormatters`; when the class fills in all of the text it has to inject, if it finds one of these functions that matches the template's name (as set up by you in `templatesPrintData`; see `cases.py` for an example), it'll use it to format the strings and/or adorn it with additional text. Should be pretty easy to figure out by looking through the code.
+Additionally, if you need to include more text around one of the templateStringData object's values, you can add a function to `Template.prototype.stringFormatters`; when the class fills in all of the text it has to inject, if it finds a function whose name matches the template's name (as set up by you in `templatesPrintData`; see `cases.py` for an example), it'll use it to format the strings and/or adorn it with additional text. Should be pretty easy to figure out by looking through the code.
 
 The variables are all standardized to `name`, `case`, `date`, and `mrn`, but you could certainly use anything else you want so long as that's the text present in the xml document.
 
