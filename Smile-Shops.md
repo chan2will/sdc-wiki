@@ -80,4 +80,6 @@ HANDY CODE SNIPPETS (probably could be made better):
     for s in store:
       store.create_slots(date_begin=date_begin, num_days=num_days)
 
-
+    Example slot_creation
+    store = Store.objects.active().get(id=3) 
+    x = store.create_slots(date_begin='2017-03-28', num_days=1)
