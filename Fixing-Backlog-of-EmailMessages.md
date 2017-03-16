@@ -45,7 +45,7 @@ yesterday = timezone.now() - timedelta(days=1)
 
 # by supplying the range of ids you can run multiple processes without overlapping and trying to send duplicate email messages
 def send_messages(low_id, high_id):
-    message_qs = EmailMessage.objects.queued().filter(date_created__gte=yesterday, id__range=(low_id, high_id)
+    message_qs = EmailMessage.objects.queued().filter(date_created__gte=yesterday, id__range=(low_id, high_id))
     for message in message_qs:
         message.send(user)
 ```
