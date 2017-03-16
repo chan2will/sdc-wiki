@@ -81,7 +81,7 @@ The fields in the spreadsheet are as follows from left to right:
         This field takes time inputs and causes sections of time to not be available for scheduling. Note: the name of this field is misleading, it does not define lunch break times it is instead used to block off times as not available by the engineer entering the information. This is most often used when certain chairs are required to have slot discontinuities during the day when the others have available slots during the entirety of the store's operating hours.
     * Monday ... Friday
 
-        These fields determine the horse available for scheduling during the day.
+        These fields determine the hours available for scheduling during the day.
     * weekend lunch
 
         Like weekday lunch above, but for the weekend.
