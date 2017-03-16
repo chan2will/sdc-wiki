@@ -32,7 +32,74 @@ If you see, find, or create any better ways to do the following, please update!
 **ADDING NEW STORES**:
 We have a store spreadsheet. It is not environment restricted. So if you change anything and pyrunner is run for the store script (0009_stores.py), then it will impact whatever environment it is run on. When I say run pyrunner in this file, I'm referring specifically to 0009_stores.py. 
 
-1. Wrangle the data provided. Make sure you have all the information necessary information. (store name, address, chairs, chair hours, store instructions, active zipcodes). Add it to the spreadsheet following the existing format.
+1. The first step in adding a new store is to collect all of the necessary data needed to populate all of the required fields on the first page of the spreadsheet. Normally all of this information is included in the jira ticket requesting the store. 
+The fields in the spreadsheet are as follows from left to right:
+    * num
+    
+        This is the store number. At this time the store number is determined by the engineer doing the store creation. There are no hard and fast rules however the standard is each different city or metro area is represented by the hundreds/thousands place of the number and each of the shops with-in that area is represented by the ones/tens place. For example, take the store number for the store at 1920 McKinney Ave in Dallas. The number for this store is 701, the 7 representing the city/area the store is in (Dallas) and the 1 representing that this store is the first store opened in that area. If another store were to be opened in Dallas the number of that store would be 702.
+    * store__name
+
+        This is the name that the store is normally called. Usually, this is just the name of the city in which the store is located. This practice is acceptable so long as there is only one store in that city. Should there be more than one store located in the same area a more creative naming scheme might need to be devised.
+    * store__contact_name
+
+        This is more or less the same as the above.
+    * store__stree1
+
+        The street address of the store. For example, 1920 McKinney Ave
+    * store__street2
+
+        Additional address information for the store, the floor of the building in which the store is located, for instance.
+    * store__locality
+
+        The city in which the store is located.
+    * store__region
+    
+        The two character code for the state in which the store is located.
+    * store__postal_code
+
+        The postal code at the store's address. Note: google sheets will strip leading 0's off of addresses which have them, this is ok as the script which brings the number into the database will add a leading 0 to codes which are only 4 numbers long.
+    * store__country_id
+
+        The country in which the store is currently located. At present this field is always US.
+    * store__phone
+
+        The phone number of the store appointment schedualing team: 800-688-4010
+    * store__date_open
+
+        The date after which the store will appear and be available for appointments on both the ecommerce and staff portal sites. This value is usually set to the day during which the store is being created. This is to allow for testing locally and in staging. The actual launch of the store slots for scheduling is accomplished by a different process.
+    * store__date_close
+
+        Date of store closure. Not needed for store creation.
+    * calendar__kind
+
+        This value simply indicates that the row cells following this one are chairs in the store or not. The only value used here is 'Chair'.
+    * calendar__name
+
+        The name of the chair to be used in the system. Values follow the naming scheme: Chair 1, Chair 2, Chair 3, etc.
+    * weekday lunch
+
+        This field takes time inputs and causes sections of time to not be available for scheduling. Note: the name of this field is misleading, it does not define lunch break times it is instead used to block off times as not available by the engineer entering the information. This is most often used when certain chairs are required to have slot discontinuities during the day when the others have available slots during the entirety of the store's operating hours.
+    * Monday ... Friday
+
+        These fields determine the horse available for scheduling during the day.
+    * weekend lunch
+
+        Like weekday lunch above, but for the weekend.
+    * Saturday ... Sunday
+
+        Like the weekday fields but for the other days.
+    * duration
+
+        The length of the appointment in minutes. This is usually left blank and will default to 30 minutes if no other value is given.
+    * weekday instructions
+
+        Customer facing information supplied by the buisness. This information should be on the jira ticket.
+    * weekend instructions
+
+        See above.
+
+    After filling in the fields described above, the postal codes serviced by this store need to be determined and entered into the sheet. TO_DO: steps for zipcode entry.
+
 2. Run pyrunner -xf 0009_stores.py locally. The store will only show up in the staff portal if the date_start is less than or equal to the day you're running it. You may need to adjust this accordingly. Usually you will need to set the store start date earlier than the actual store start date because they will want to start scheduling a week or two before. Generate slots locally. Make sure they look like what you're expecting. 
 3. Once ready, run on staging. Get Jessica, Jordan, and QA to review. If you want to be fancy, you'll need to block out the first week of slots. Generally you are making the store go live a week before they want anyone booked. Slots will get generated for that week in-between so you will want to close them out (can be done from the shell). Another option is change the store hours so lunch blocks out all the slots, run pyrunner. Generate slots for the next week. Change the hours back to what is requested, run pyrunner, generate slots for the go live date and following weeks. 
 4. Slots will not be bookable from the ecommerce website until the zipcodes are active. 
