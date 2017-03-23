@@ -38,6 +38,10 @@ For New Lab User (Fulfillment):
 * auth_group - Lab, Fulfillment Specialist
 * employee_title - Fulfillment Specialist
 * employee_department - Lab
+For Marketing User:
+* auth_group - Marketing
+* employee_title - Marketing
+* employee_department - Marketing
 
 For Technology:
 * auth_group - Engineering
