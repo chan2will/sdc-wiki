@@ -195,3 +195,8 @@ HANDY CODE SNIPPETS (probably could be made better):
     Example slot_creation
     store = Store.objects.active().get(id=3) 
     x = store.create_slots(date_begin='2017-03-28', num_days=1)
+
+    docker exec -it vulcan /bin/bash
+    . /venv/bin/activate
+    cd app
+    ./manage.py …….
