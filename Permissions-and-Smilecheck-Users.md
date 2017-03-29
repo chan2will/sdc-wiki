@@ -44,7 +44,7 @@ For Marketing User:
 * employee_title - Marketing
 * employee_department - Marketing
 
-For Seups User (Setup Technician):
+For Setups User (Setup Technician):
 * auth_group - Lab
 * employee_title - setup techinician
 * employee_department - Lab
