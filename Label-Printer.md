@@ -95,3 +95,5 @@ The variables are all standardized to `name`, `case`, `date`, and `mrn`, but you
 Last, note that the actual button click handler exists in `caseDetail.js`. It also contains a `sizeMap` that matches each label size to the side of the printer that I'm assuming it's going to be on; feel free to edit if desired. By passing this in to the `labelUtils.printLabels` method, I figure you could have different setups depending on the page, if use of the label printer automation should ever expand beyond that button. You can also pass in an error handler callback in order to provide page-specific error logic in case something goes awry.
 
 The last thing to note is the additional bit of setup in `caseDetail.js`; the JS date object is appended to `labelData.templateStringData` here, and `labelUtils.createLabelGroup` is used to turn the data into a set of label objects that `DYMOLabelFramework.js` can actually print.
+
+Label printer is located at the desk by Michael Alexander (behind Lakia). It is shared and the IP address is 10.11.20.246
