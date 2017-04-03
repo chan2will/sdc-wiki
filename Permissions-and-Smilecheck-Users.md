@@ -5,7 +5,7 @@ DEACTIVATING/TERMINATING SMILECHECK ACCOUNT:
 * Uncheck the Active box and save. 
 * Reply to ticket saying that their useraccount is deactivated. 
 * More steps need to be taken if an engineering account. Will most likely need to be handled by an admin. 
-* If smile technician, please date_remove any active scan market rows that are assigned to them. 
+* If smile technician, please date_remove any active scan market zipcodes that are assigned to them. (In the admin locations/scanmarket)
 
 ADDING A NEW USER:
 Always double check that they do not already have a user account. Sometimes duplicate tickets are submitted. If you don't have all the information you need, please ask the requester or someone that you think will know. 
