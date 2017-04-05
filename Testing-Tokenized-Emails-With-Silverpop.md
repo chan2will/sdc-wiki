@@ -1,5 +1,3 @@
-# Overview
-
 Since adding the ability for a user to finish an account via email, most of our emails generated in silverpop have a token attached to them as a query parameter. For some features, we are using this token to temporarily treat the customer as an authenticated user. In order to test these features, we need to be able to send tokenized emails from silverpop as an entry point into a given feature making use of that token. This document will outline a process for generating those emails for a testing environment.
 
 ## Create a query for your email recipients
