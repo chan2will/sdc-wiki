@@ -22,6 +22,7 @@
 * [Running Django Tests Locally](running-django-tests-locally)
 * [Selenium IDE automation](selenium-ide-automation)
 * [Testing Tokenized Emails With Silverpop](testing-tokenized-emails-with-silverpop)
+* [Testing Celery](testing-celery)
 
 ## Smilecheck systems & processes
 * [Case Workflow](case-workflow)
