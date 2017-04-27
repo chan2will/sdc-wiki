@@ -50,6 +50,11 @@ For Setups User (Setup Technician):
 * employee_title - setup techinician
 * employee_department - Lab
 
+For RCM User:
+* auth_group - Patient Care Specialist, RCM
+* employee_title - RCM Agent
+* employee_department - RCM
+
 For Technology:
 * auth_group - Engineering
 * employee_title - whatever is provided
