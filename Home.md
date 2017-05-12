@@ -37,6 +37,7 @@
 * [Smile Shops](smile-shops)
 * [Processing backlogged email messages](fixing-backlog-of-emailmessages)
 * [Label Printer](label-printer)
+* [Update Fixtures](update-fixtures)
 
 ## Design
 * [Back End Style Guide](back-end-style-guide)
