@@ -4,7 +4,7 @@
 Olapic self defines itself as a "Earned Content Platform [that] amplifies engagement and performance for brands like West Elm, American Eagle Outfitters, & JetBlue using real customer photos." Olapic also seems to be a tool used for marketing teams to aggregate images from social media platforms, and place said images on to an application through the use of an iframe based widget.
 
 ###  Before Developing 
-Olapic does not have a formal QA environment or source-control. This means that if you make a change to a "widget" that is currently deployed to our site, that the change is irreversible and that change will be pushed to our "live" site. Because of this design feature, I have decided that it is best to "version" each widget, to insure that state of the widget that is being used. 
+Olapic does not have a formal QA environment or source-control. This means that if you make a change to a "widget" that is currently deployed to our site, that the change is irreversible and that change will be pushed to our "live" site. Because of this design feature, I have decided that it is best to "version" each widget, to better document the state of the widget that is being used. 
 
 This means that you should create a new widget and then apply "Gallery B" styling prior to development.
 
