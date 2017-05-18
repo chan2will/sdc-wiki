@@ -3,7 +3,7 @@ All times are in are in CDT.
 
 ## Shipment Task
 
-Monday - Friday
+Daily (Sunday - Saturday)
 
 Timing - 24 hours a day - This tasks runs at 10, 30, and 50 minutes past the hour (i.e. 9:10, 9:30, 9:50, 10:10, 10:30,10:50).
 
