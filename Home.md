@@ -56,3 +56,4 @@
 * [Shipping](shipping)
 * [Silverpop](silverpop)
 * [Olapic](olapic)
+* [Periscope Embed API Flow](periscope-embed-flow)
