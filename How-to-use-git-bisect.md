@@ -1,12 +1,12 @@
-##`git bisect`
+## `git bisect`
 
-###Why would you need it?
+### Why would you need it?
 `git bisect` can be extremely helpful for tracking down changes that were created, but you're not exactly sure where or when. An example-- I tried to create a new prescription on the staff portal, and after clicking the button, a modal window opened and immediately closed. I knew it used to work properly at some point, but it wasn't now, and I confirmed it on dev as well.
 
-###The basics
+### The basics
 `git bisect` will take 2 given commits: 1 "good" working one, and 1 "bad" broken one. It will then take the median of the two, and wait for you to tell it if it is "good" or "bad". Once you continue to label each try as "good" or "bad", you arrive shortly at the end of all possible commits, and it will tell you what the first bad commit was.
 
-###Where to start
+### Where to start
 To find the first "good" one, you can look at your git log, and pick an entry from several days ago, when you think it was working. i.e.
 
 ```shell
@@ -29,7 +29,7 @@ So you can check it out directly:
 
 Then reload your page and see if your issue works. If it does, great. This will be your "good" commit. Then take the most recent one (`0ee794a` in this case) and that will be your "bad" one.
 
-###Bisecting
+### Bisecting
 Git bisect must be invoked at the top level directory, i.e. above "smilecheck". For me, that is
 
 `/Users/eric/dev/scc-api`
@@ -62,7 +62,7 @@ We do this until git finally responds with
 
 `first known bad commit -- 813ace087f52b251ed6372fa2363e48e4e1680d7`
 
-###Finding and fixing the bug
+### Finding and fixing the bug
 So now we know where a bug was introduced. We can go directly to this in github with the link
 
 [https://github.com/CamelotVG/scc-api/commit/813ace087f52b251ed6372fa2363e48e4e1680d7](https://github.com/CamelotVG/scc-api/commit/813ace087f52b251ed6372fa2363e48e4e1680d7)
