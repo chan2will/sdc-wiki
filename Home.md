@@ -17,6 +17,7 @@
 * [How to use git bisect](how-to-use-git-bisect)
 * [Local device testing guide](local-device-testing-guide)
 * [Profiling a web page to spot potential bottlenecks](profiling-a-web-page-to-spot-potential-bottlenecks)
+* [VPN](vpn)
 
 ## Testing
 * [Running Django Tests Locally](running-django-tests-locally)
