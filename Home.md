@@ -48,6 +48,7 @@
 ## Deployment / devops
 * [Deploying a production release](deploying-a-production-release)
 * [Restore Data to Dev Staging](restore-data-to-dev-staging)
+* [Coding in ES6](coding-in-es6)
 
 ## Analytics
 * [Google Analytics](google-analytics)
