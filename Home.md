@@ -49,6 +49,7 @@
 * [Deploying a production release](deploying-a-production-release)
 * [Restore Data to Dev Staging](restore-data-to-dev-staging)
 * [Coding in ES6](coding-in-es6)
+* [Creating Waffle Switches/Flags via Adhoc Script](creating-waffle-switches-and-flags-via-adhoc-script)
 
 ## Analytics
 * [Google Analytics](google-analytics)
