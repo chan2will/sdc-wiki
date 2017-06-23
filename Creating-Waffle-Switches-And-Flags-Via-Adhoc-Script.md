@@ -9,22 +9,20 @@ By making a script that will handle generation of any switches/flags (and potent
 ```
 from waffle.models import Switch
 
-switch = Switch(
+Switch.objects.get_or_create(
      name='this_waffle_switch',
      active=True,
 )
-switch.save()
 ```
 
 ### Flag
 ```
 from waffle.models import Flag
 
-flag = Flag(
+Flag.objects.get_or_create(
      name='this_waffle_flag',
      everyone=True,
 )
-flag.save()
 ```
 
 For reference, here's the source code for all the Waffle models. Check it if you want to know what parameters can be passed in when creating a new flag/switch/sample.
