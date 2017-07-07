@@ -17,11 +17,11 @@ DEPLOYED: STAGING Vulcan with SHA <copy-this-SHA-that-exists-here> ---- GITHUB
 ```
 2. Go to jenkins => `prod-deploy vulcan`
 3. `Build with parameters` and paste SHA
-4. If there are ad-hoc scripts to run, or fixtures that have been updated, run pyrunner:  
+4. Get `RELEASE_VERSION` value from Jira's 'Release' page
+5. If there are ad-hoc scripts to run, or fixtures that have been updated, run pyrunner:  
     a. Go to jenkins => `prod-pyrunner`  
     b. `Build with parameters` and paste SHA  
-    c. Get `RELEASE_VERSION` value from Jira's 'Release' page
-5. Monitor the progress on jenkins. On successful deployment, a slack message will be posted to #kamino.
+6. Monitor the progress on jenkins. On successful deployment, a slack message will be posted to #kamino.
 
 #### Bookkeeping
 
