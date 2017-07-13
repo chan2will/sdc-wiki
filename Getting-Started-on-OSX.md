@@ -62,7 +62,7 @@ git remote update
 git branch -u upstream/develop
 ```
 
-##Fix the openssl issue and sym link to the appropriate files
+## Fix the openssl issue and sym link to the appropriate files
 ```bash
 brew doctor
 brew update
@@ -83,6 +83,15 @@ Install npm modules
 ```bash
 cd smilecheck
 python manage.py npm
+```
+Install git pre-commit hook
+```bash
+pre-commit install
+```
+**Note**: this pre-commit hook will run checks on the code on the file you are working in. It may pick up flake8 violations that were not your doing-- determine if they should be fixed and act appropriately. If there are failures and it is not related to your fix or is not relevant, you can bypass this pre-commit hook by passing it `--no-verify`, e.g.
+```bash
+git add path/to/the_file.py
+git commit -m 'Update the foobar model with a beep boop widget' --no-verify
 ```
 
 ## Set up the database and run the site
