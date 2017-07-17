@@ -56,7 +56,7 @@
 * [Tracking Pixels and Site Analytics](tracking-pixels-and-site-analytics)
 
 ## Third party service information
-* [Align Integration WIP](align-integration-wip)
+* [Align Integration](align-integration)
 * [Shipping](shipping)
 * [Silverpop](silverpop)
 * [Olapic](olapic)
