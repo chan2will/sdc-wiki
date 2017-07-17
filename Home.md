@@ -63,4 +63,4 @@
 * [Periscope Embed API Flow](periscope-embed-flow)
 
 ## Internal Service Information
-* [Asset Transfer Service](asset-transfer)
+* [Asset Transfer Service](asset-transfer-service)
