@@ -40,6 +40,7 @@
 * [Label Printer](label-printer)
 * [Update Fixtures](update-fixtures)
 * [Running Shipment Tracking Job](running-shipment-tracking-job)
+* [SmilePay Demystified](smilepay-demystified)
 
 ## Design
 * [Back End Style Guide](back-end-style-guide)
