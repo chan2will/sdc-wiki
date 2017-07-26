@@ -9,7 +9,7 @@ The asset watcher service is a python process that is currently running locally 
 #### The relevant directories that are watched can be found by connecting to the network drive.
 1. From OSX, connect to the directory with command-k, and use URL smb://owbtvfs01
 2. Enter your ADFS credentials
-3. Navigate to PrintSetup/Assets/<env>
+3. Navigate to PrintSetup/Assets/{env}
 4. Files can be dropped into that folder to begin the process.
 5. Processed files will move to the Processed directory
 6. PrintSetup/Assets/LogTemp will contain logs for the python process running on the server.
@@ -17,7 +17,7 @@ The asset watcher service is a python process that is currently running locally 
 #### Check on the events emitted by the watcher from the Amazon SQS interface.
 1. Login to AWS
 2. Navigate to the Simple Queue Service from the top left Services dropdown
-3. You should see a list of queues, search for the asset transfer queue by entering '<env>-vulcan-asset-transfer-inbox'
+3. You should see a list of queues, search for the asset transfer queue by entering '{env}-vulcan-asset-transfer-inbox'
 4. Right click the record in the table to see a list of operations. From here you can send messages, purge the queue to remove any testing messages that you no longer want, or view the current contents of the queue. Here is a set of messages to show the typical structure for each event.
 ```
 {
@@ -41,7 +41,7 @@ The asset watcher service is a python process that is currently running locally 
 #### Check on the files uploaded to S3
 1. Login to AWS
 2. Navigate to S3 from the top left Services dropdown
-3. Navigate to sdc-asset-transfer -> <env> -> staged_assets
+3. Navigate to sdc-asset-transfer -> {env} -> staged_assets
 4. Here you can see uploaded assets.
 5. The client behaves strangely when you download the assets. After a file is downloaded, the client decompresses the file but leaves the gz extension. To open the OBJ, remove the gz extension but not not attempt to decompress. The file should open normally.
 
@@ -67,7 +67,7 @@ The asset transfer service runs on Amazon's EC2 Container Service. You can view 
 1. Login to AWS
 2. Navigate to the EC2 Container Service from the top left services menu
 3. Click on the cluster for the environment that you are interested (ex: sdc-qa)
-4. Find the relevant service following the naming pattern '<env>-asset-transfer'
+4. Find the relevant service following the naming pattern '{env}-asset-transfer'
 5. Click the service name to see details for that service
 6. You should see a list of running tasks, click the uuid of the relevant task
 7. From the table of containers, click the arrow on the left to see a dropdown of information related to the container
