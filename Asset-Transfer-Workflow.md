@@ -6,7 +6,7 @@ The asset watcher service is a python process that is currently running locally 
 
 ### Debug
 
-The relevant directories that are watched can be found by connecting to the network drive.
+#### The relevant directories that are watched can be found by connecting to the network drive.
 1. From OSX, connect to the directory with command-k, and use URL smb://owbtvfs01
 2. Enter your ADFS credentials
 3. Navigate to PrintSetup/Assets/<env>
@@ -14,7 +14,7 @@ The relevant directories that are watched can be found by connecting to the netw
 5. Processed files will move to the Processed directory
 6. PrintSetup/Assets/LogTemp will contain logs for the python process running on the server.
 
-You can check on the event emitted by the watcher from the Amazon SQS interface.
+#### Check on the events emitted by the watcher from the Amazon SQS interface.
 1. Login to AWS
 2. Navigate to the Simple Queue Service from the top left Services dropdown
 3. You should see a list of queues, search for the asset transfer queue by entering '<env>-vulcan-asset-transfer-inbox'
@@ -22,21 +22,28 @@ You can check on the event emitted by the watcher from the Amazon SQS interface.
 ```
 {
 "type": "sdc_asset_transfer_file_created",
-"file_name": "Ca12747b9f65b8_Step1.obj",
+"file_name": "<case_number>_Step1.obj",
 "uncompressed_sha1_hash": "abcdefg"
 }
 
 {
 "type": "sdc_asset_transfer_file_uploaded",
-"file_name": "Ca12747b9f65b8_Step1.obj",
+"file_name": "<case_number>_Step1.obj",
 "uncompressed_sha1_hash": "abcdefg"
 }
 
 {
 "type": "sdc_asset_transfer_uploads_complete",
-"treatment_plan_uuid": "59a33a6d-e54b-4cf7-8215-2ec906f307c2"
+"treatment_plan_uuid": "<treatment_plan_uuid>"
 }
 ```
+
+#### Check on the files uploaded to S3
+1. Login to AWS
+2. Navigate to S3 from the top left Services dropdown
+3. Navigate to sdc-asset-transfer -> <env> -> staged_assets
+4. Here you can see uploaded assets.
+5. The client behaves strangely when you download the assets. After a file is downloaded, the client decompresses the file but leaves the gz extension. To open the OBJ, remove the gz extension but not not attempt to decompress. The file should open normally.
 
 ## The Asset Transfer Service
 
