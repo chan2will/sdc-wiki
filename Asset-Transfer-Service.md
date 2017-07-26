@@ -1,1 +1,0 @@
-The asset transfer service helps upload/process files as automatically and asynchronously as possible. It currently only supports OBJ treatment plan assets.
