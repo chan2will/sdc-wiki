@@ -1,4 +1,4 @@
-The asset transfer workflow helps upload/process files as automatically and asynchronously as possible. It currently only supports OBJ treatment plan assets (kind PROVPREV in the cases_treatment_plan_asset table). This workflow contains three major components: [The Asset Watcher](https://github.com/CamelotVG/sdc-asset-watcher), The Asset Transfer Service, and the Smilecheck Staff Portal Integration.
+The asset transfer workflow helps upload/process files as automatically and asynchronously as possible. The goal is for all assets to be processed automatically in this manner, replacing all manual uploads in the staff portal. It currently only supports OBJ treatment plan assets (kind PROVPREV in the cases_treatment_plan_asset table). This workflow contains three major components: [The Asset Watcher](https://github.com/CamelotVG/sdc-asset-watcher), The Asset Transfer Service, and the Smilecheck Staff Portal Integration.
 
 ## [The Asset Watcher](https://github.com/CamelotVG/sdc-asset-watcher)
 
@@ -19,3 +19,7 @@ This event is emitted when a file has been uploaded from the BT fileserver to S3
 ### Asset Uploads Complete
 
 This event is emitted when all transfer files have been processed and are ready to be bundled into a file that can be used downstream by the 3d treatment plan viewer. For this to happen, all files must have asset transfer records  that are is_uploaded == True and that they have been associated with a treatment plan (which happens as part of the staff portal portion). The handler for this event will create a NamedTemporaryFile as a zip archive, and then grab every asset transfer file from S3 and add it to the archive. It will then create a treatment plan asset from this zip file. Once this happens, everything downstream should be able to interact with the assets in the same manor that they always have.
+
+## The Smilecheck Staff Portal Integration
+
+Before the asset transfer files can be processed into a bundled treatment plan asset
