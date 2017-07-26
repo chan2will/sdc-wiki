@@ -2,7 +2,41 @@ The asset transfer workflow helps upload/process files as automatically and asyn
 
 ## [The Asset Watcher](https://github.com/CamelotVG/sdc-asset-watcher)
 
-The asset watcher service is a python process that is currently running locally on our file server at the BT lab. It is the entry point for this workflow. It monitors the filesystem events in a directory that is setup to receive file exports from the CA software. It handles uploading those files to S3 so that they can be accessed later. Events are submitted to an SNS topic (ex: arn:aws:sns:us-west-1:866893681515:qa1-asset-watcher) that the asset transfer service subscribes to in order to perform operations based on the files that are processed.
+The asset watcher service is a python process that is currently running locally on our file server at the BT lab. It is the entry point for this workflow. It monitors the filesystem events in a directory that is setup to receive file exports from the CA software. It handles uploading those files to S3 so that they can be accessed later. Events are submitted to an SNS topic (ex: arn:aws:sns:us-west-1:866893681515:qa1-asset-watcher) that the asset transfer service subscribes to in order to perform operations based on the files that are processed. Updates to the code for this service will have to be added to the file server and the service will need to be restarted for the changes to take effect.
+
+### Debug
+
+The relevant directories that are watched can be found by connecting to the network drive.
+1. From OSX, connect to the directory with command-k, and use URL smb://owbtvfs01
+2. Enter your ADFS credentials
+3. Navigate to PrintSetup/Assets/<env>
+4. Files can be dropped into that folder to begin the process.
+5. Processed files will move to the Processed directory
+6. PrintSetup/Assets/LogTemp will contain logs for the python process running on the server.
+
+You can check on the event emitted by the watcher from the Amazon SQS interface.
+1. Login to AWS
+2. Navigate to the Simple Queue Service from the top left Services dropdown
+3. You should see a list of queues, search for the asset transfer queue by entering '<env>-vulcan-asset-transfer-inbox'
+4. Right click the record in the table to see a list of operations. From here you can send messages, purge the queue to remove any testing messages that you no longer want, or view the current contents of the queue. Here is a set of messages to show the typical structure for each event.
+```
+{
+"type": "sdc_asset_transfer_file_created",
+"file_name": "Ca12747b9f65b8_Step1.obj",
+"uncompressed_sha1_hash": "abcdefg"
+}
+
+{
+"type": "sdc_asset_transfer_file_uploaded",
+"file_name": "Ca12747b9f65b8_Step1.obj",
+"uncompressed_sha1_hash": "abcdefg"
+}
+
+{
+"type": "sdc_asset_transfer_uploads_complete",
+"treatment_plan_uuid": "59a33a6d-e54b-4cf7-8215-2ec906f307c2"
+}
+```
 
 ## The Asset Transfer Service
 
@@ -20,6 +54,19 @@ This event is emitted when a file has been uploaded from the BT fileserver to S3
 
 This event is emitted when all transfer files have been processed and are ready to be bundled into a file that can be used downstream by the 3d treatment plan viewer. For this to happen, all files must have asset transfer records  that are is_uploaded == True and that they have been associated with a treatment plan (which happens as part of the staff portal portion). The handler for this event will create a NamedTemporaryFile as a zip archive, and then grab every asset transfer file from S3 and add it to the archive. It will then create a treatment plan asset from this zip file. Once this happens, everything downstream should be able to interact with the assets in the same manor that they always have.
 
+### Debug
+
+The asset transfer service runs on Amazon's EC2 Container Service. You can view logs for the relevant environment by following these steps.
+1. Login to AWS
+2. Navigate to the EC2 Container Service from the top left services menu
+3. Click on the cluster for the environment that you are interested (ex: sdc-qa)
+4. Find the relevant service following the naming pattern '<env>-asset-transfer'
+5. Click the service name to see details for that service
+6. You should see a list of running tasks, click the uuid of the relevant task
+7. From the table of containers, click the arrow on the left to see a dropdown of information related to the container
+8. Click 'View logs in CloudWatch' to see logging output from that instance.
+
+
 ## The Smilecheck Staff Portal Integration
 
-Before the asset transfer files can be processed into a bundled treatment plan asset
+Before the asset transfer files can be processed into a bundled treatment plan asset, they must be associated with a treatment plan. The user making that association must also be recorded. To this end, the interface on the UPLOAD TREATMENT PLAN ASSET modal has been updated to allow association of asset transfers. This is currently only available if a user selects 3D Viewer OBJ Preview from the kind dropdown. A user will then be presented with a list of available asset transfers as soon as the asset created events have been emitted from the watcher and process by the transfer service. This will allow for a user to associate files before the S3 uploads have been completed. A user can select from the list of transfers and then submit that selection. This will update the relevant records with the current treatment plan uuid as well as the current staff portal user. A check will then be made to see if all transfer operations are complete. If this is the case, an asset uploads complete event will be emitted to initiate the bundling process. If the assets are not uploaded yet, the bundling will be initiated by the uploaded handler. The upload manually button should allow for the old style of synchronous uploading.
