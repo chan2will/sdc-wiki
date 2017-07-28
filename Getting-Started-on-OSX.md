@@ -84,7 +84,8 @@ Install npm modules
 cd smilecheck
 python manage.py npm
 ```
-Install git pre-commit hook
+
+## Install git pre-commit hook
 ```bash
 pre-commit install
 ```
