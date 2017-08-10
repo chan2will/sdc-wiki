@@ -63,6 +63,6 @@ Each time `slot_utc_date` is called, we see that `localize` and `pytz` are refer
 ￼￼![Sublime-2](http://imgur.com/eUOcp9H.png)
 
 ### Solution
-After some code was re-written to not call `slot_utc_date` in the `for` loop (https://github.com/CamelotVG/scc-api/pull/1927/files), the processing time improved by 15x. There was also some old code that was being ran that was unnecessary in `sidenav.jade` (removed `{% generate_navbar as navdict %}`), and using the Django debug toolbar, we see the numbers for Time and SQL calls dramatically decreased:
+After some code was re-written to not call `slot_utc_date` in the `for` loop (https://github.com/CamelotVG/scc-api/pull/1927/files), the processing time improved by 15x. There was also some old code that was being ran that was unnecessary in `sidenav.pug` (removed `{% generate_navbar as navdict %}`), and using the Django debug toolbar, we see the numbers for Time and SQL calls dramatically decreased:
 
 ￼￼![Debug-1](http://imgur.com/tzZ9DR9.png)
