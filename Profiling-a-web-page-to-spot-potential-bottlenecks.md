@@ -1,12 +1,12 @@
-##Styling and Profiling
+## Styling and Profiling
 
-###Problem
+### Problem
 https://www.pivotaltracker.com/story/show/128548927
 > The current `/staff/scheduling/appt/<UUID>/` is too slow. It is also causing 502 gateway errors. Need to resolve ASAP.
 
 The problem was that there was something that was slowing the page down, but we were unsure what it was. After a few wild guesses turned out to be red herrings, the best way to track down what was causing such a performance hit was to use a system profiler. 
 
-###Solution
+### Solution
 After looking around for a profiler solution that would be easy to implement, it turns out we have one that is already available to us via `django-extensions`, `runprofileserver`:
 
 http://django-extensions.readthedocs.io/en/latest/runprofileserver.html
@@ -16,7 +16,7 @@ There is a very clear caveat with using this, provided by the authors:
 
 Onward. `runprofileserver` uses `hotshot` as a profiler by default, which is supported in Python 2, but it is not compatible with Python 3, so we need to tell it to use `cProfile` instead. We will also flag it with `kcachegrind`, which makes the data available for viewing in a KCacheGrind compatible tool— in our case, we will be using `qcachegrind`, a QT app available on a Mac.
 
-###Tools Installation
+### Tools Installation
 
 Install `qcachegrind`, then run the profile server:
 
@@ -27,7 +27,7 @@ mkdir /tmp/profile-data
 ./manage.py runprofileserver --kcachegrind --use-cprofile --prof-path=/tmp/profile-data
 ```
 
-###Profile
+### Profile
 Hit the problematic web page in question:
 
 `http://localhost:8000/staff/scheduling/appt/{YOUR UUID HERE}/`
@@ -36,7 +36,7 @@ Once it finishes loading, CTRL-C your local server. This should have generated a
 
 `staff.scheduling.appt.1a79c183-346f-422d-8faa-5e4bbbdad447.023545ms.1472158306.prof`
 
-###Diagnostics
+### Diagnostics
 You can open this file in the `qcachegrind` application by either opening the application via Finder, then File > Open > etc… or by invoking it directly in the command line:
 
 ```
@@ -62,7 +62,7 @@ Each time `slot_utc_date` is called, we see that `localize` and `pytz` are refer
 
 ￼￼![Sublime-2](http://imgur.com/eUOcp9H.png)
 
-###Solution
+### Solution
 After some code was re-written to not call `slot_utc_date` in the `for` loop (https://github.com/CamelotVG/scc-api/pull/1927/files), the processing time improved by 15x. There was also some old code that was being ran that was unnecessary in `sidenav.jade` (removed `{% generate_navbar as navdict %}`), and using the Django debug toolbar, we see the numbers for Time and SQL calls dramatically decreased:
 
 ￼￼![Debug-1](http://imgur.com/tzZ9DR9.png)
