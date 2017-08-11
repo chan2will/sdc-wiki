@@ -20,6 +20,18 @@ This is the new "relational" database, which consists of a database and associat
 **SDC-PROD-B**:
 Duplication of SDC-PROD, with exact same relational tables.  The goal is to use a separate IP address when sending emails from this database, in the case that our other IP address gets marked as spam.
 
+# Add Field to Relational Table
+![screen shot 2017-08-11 at 11 21 10 am](https://user-images.githubusercontent.com/10427685/29222688-2dd4cd8a-7e89-11e7-81d5-f99cb8b2c3a1.png)
+![screen shot 2017-08-11 at 11 21 54 am](https://user-images.githubusercontent.com/10427685/29222686-2dd3b058-7e89-11e7-82dd-faf381325594.png)
+![screen shot 2017-08-11 at 11 23 40 am](https://user-images.githubusercontent.com/10427685/29222687-2dd496da-7e89-11e7-9d04-8da2b0680297.png)
+![screen shot 2017-08-11 at 11 23 57 am](https://user-images.githubusercontent.com/10427685/29222689-2dd514c0-7e89-11e7-916f-ef5bfdc6eefc.png)
+![screen shot 2017-08-11 at 11 24 13 am](https://user-images.githubusercontent.com/10427685/29222691-2dde0f4e-7e89-11e7-9ecc-c6c5ed3d6276.png)
+![screen shot 2017-08-11 at 11 28 59 am](https://user-images.githubusercontent.com/10427685/29222690-2ddc00dc-7e89-11e7-896b-0d9d0966a22b.png)
+![screen shot 2017-08-11 at 11 30 05 am](https://user-images.githubusercontent.com/10427685/29222692-2de1d66a-7e89-11e7-9af5-3c4ef925e53e.png)
+![screen shot 2017-08-11 at 11 30 20 am](https://user-images.githubusercontent.com/10427685/29222693-2de4a2be-7e89-11e7-97ed-de1a851261b8.png)
+![screen shot 2017-08-11 at 11 30 46 am](https://user-images.githubusercontent.com/10427685/29222694-2de5e494-7e89-11e7-9305-1707310d7ae1.png)
+
+
 ## To remove all contacts from a database
 
 First create a new Contact List, backed by the database you want to remove contacts from.  Then go to that contact list (which starts with 0 things in it).  Click the "Add Contacts" button.  Create a query that will select all of them (i.e. Email is not empty".  Let that job run, which should import all of the contacts into the contact list.  Once you've done that, go back to the database and click "Purge".  You'll want to select to purge the e-mails located in your temporary contact list (it doesn't allow choosing itself... dumb).  Let that job run and it should have dumped everything.
