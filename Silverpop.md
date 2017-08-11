@@ -21,6 +21,9 @@ This is the new "relational" database, which consists of a database and associat
 Duplication of SDC-PROD, with exact same relational tables.  The goal is to use a separate IP address when sending emails from this database, in the case that our other IP address gets marked as spam.
 
 # Add Field to Relational Table
+1. Verify the new field name and type with marketing (See [Silverpop doc on field types](https://www.ibm.com/support/knowledgecenter/en/SSWU4L/Data/imc_Data/What_are_the_Database_Field_Definitions_7778.html))
+2. Create a CSV file with the name of the new field(s), doesn't matter what you name the file.
+3. Login to Silverpop and navigate to the "Import Update" page
 ![screen shot 2017-08-11 at 11 21 10 am](https://user-images.githubusercontent.com/10427685/29222688-2dd4cd8a-7e89-11e7-81d5-f99cb8b2c3a1.png)
 ![screen shot 2017-08-11 at 11 21 54 am](https://user-images.githubusercontent.com/10427685/29222686-2dd3b058-7e89-11e7-82dd-faf381325594.png)
 ![screen shot 2017-08-11 at 11 23 40 am](https://user-images.githubusercontent.com/10427685/29222687-2dd496da-7e89-11e7-9d04-8da2b0680297.png)
