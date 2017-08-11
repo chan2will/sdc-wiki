@@ -22,14 +22,22 @@ Duplication of SDC-PROD, with exact same relational tables.  The goal is to use 
 
 # Add Field to Relational Table
 1. Verify the new field name and type with marketing (See [Silverpop doc on field types](https://www.ibm.com/support/knowledgecenter/en/SSWU4L/Data/imc_Data/What_are_the_Database_Field_Definitions_7778.html))
+    * `new_field_name`, Text
 2. Create a CSV file with the name of the new field(s), doesn't matter what you name the file.
+    * `new_field.csv`
 3. Login to Silverpop and navigate to the "Import Update" page
 ![screen shot 2017-08-11 at 11 21 10 am](https://user-images.githubusercontent.com/10427685/29222688-2dd4cd8a-7e89-11e7-81d5-f99cb8b2c3a1.png)
+4. 'Update Type' = Relational Table, then click on 'Select Table'.  Be sure to click on the 'Shared' tab when selecting a contact source.  **Start with updating the `DEV-` relational table first.**
 ![screen shot 2017-08-11 at 11 21 54 am](https://user-images.githubusercontent.com/10427685/29222686-2dd3b058-7e89-11e7-82dd-faf381325594.png)
-![screen shot 2017-08-11 at 11 23 40 am](https://user-images.githubusercontent.com/10427685/29222687-2dd496da-7e89-11e7-9d04-8da2b0680297.png)
 ![screen shot 2017-08-11 at 11 23 57 am](https://user-images.githubusercontent.com/10427685/29222689-2dd514c0-7e89-11e7-916f-ef5bfdc6eefc.png)
+5. Select the CSV file you saved locally (`new_field.csv`), then click 'Next'.
+![screen shot 2017-08-11 at 11 23 40 am](https://user-images.githubusercontent.com/10427685/29222687-2dd496da-7e89-11e7-9d04-8da2b0680297.png)
+6. Select 'First row contains field names', then click 'Next'.
 ![screen shot 2017-08-11 at 11 24 13 am](https://user-images.githubusercontent.com/10427685/29222691-2dde0f4e-7e89-11e7-9ecc-c6c5ed3d6276.png)
+7. Add the new field name and field type, then click 'Add Field'.  This should automatically map the 'Fields From File' correctly in the table, but you can also select it in the 'Fields' dropdown.  Click 'Next'.
 ![screen shot 2017-08-11 at 11 28 59 am](https://user-images.githubusercontent.com/10427685/29222690-2ddc00dc-7e89-11e7-896b-0d9d0966a22b.png)
+8. Review all the fields, noting the new field name and type is in the list.  Click 'Next'.
+9. Click on 'Submit'
 ![screen shot 2017-08-11 at 11 30 05 am](https://user-images.githubusercontent.com/10427685/29222692-2de1d66a-7e89-11e7-9af5-3c4ef925e53e.png)
 ![screen shot 2017-08-11 at 11 30 20 am](https://user-images.githubusercontent.com/10427685/29222693-2de4a2be-7e89-11e7-97ed-de1a851261b8.png)
 ![screen shot 2017-08-11 at 11 30 46 am](https://user-images.githubusercontent.com/10427685/29222694-2de5e494-7e89-11e7-9305-1707310d7ae1.png)
