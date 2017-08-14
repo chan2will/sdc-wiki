@@ -96,6 +96,12 @@ The issue relates to environment variables. `Django-compressor` and `Django-comp
 
 I don't currently know exactly what's getting messed up, but running the server through PyCharm seems to throw an additional wrinkle into this setup. Hopefully it can be alleviated by setting some specific environment variables in PyCharm.
 
+Just incase this is unclear, you may want to read this stackoverflow link [here](https://stackoverflow.com/questions/8732119/pycharm-path-on-os-x)
+
+How can you fix this? Simple. Complete the following steps. 
+In your terminal run `echo $PATH`
+In PyCharms server configuration add the path variable to the `Envrionment variables` list. Make sure to add a semi-colon to the end of the path.
+
 # Reference
 
 * Django-Compressor
