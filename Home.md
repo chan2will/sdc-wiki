@@ -1,7 +1,6 @@
 # SmileDirectClub Wiki
 
 ## Getting started
-* [New Engineer Accounts Setup](new-engineer-accounts-setup)
 * [Getting Started on OSX](getting-started-on-osx)
 * [Branch management and PR conventions](branch-management-and-pr-conventions)
 * [Git Config](git-config)
