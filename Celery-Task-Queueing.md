@@ -40,9 +40,11 @@ Redis is our Celery "broker".  Be sure to start Redis (use the following command
 `redis-server`
 
 To start the celery daemon locally, for tasks:
+
 `celery -A settings.celery worker --loglevel=info`
  
 To start the celery daemon locally for periodic tasks:
+
 `celery beat -A settings.celery --loglevel=info`
  
 To run a single task (for testing):
