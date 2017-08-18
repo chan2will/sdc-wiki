@@ -44,6 +44,7 @@
 * [Update Fixtures](update-fixtures)
 * [Running Shipment Tracking Job](running-shipment-tracking-job)
 * [SmilePay Demystified](smilepay-demystified)
+* [Celery Task Queueing](Celery-Task-Queueing)
 
 ## Design
 * [Back End Style Guide](back-end-style-guide)
